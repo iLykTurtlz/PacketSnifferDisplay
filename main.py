@@ -1,0 +1,42 @@
+import sys
+from Tools import *
+from RawData import RawData
+from Ethernet import Ethernet
+from IP import IP
+from TCP import TCP
+
+def main():
+	if sys.argv[1] == 0 :
+		print ("usage: python3 discountwireshark.py <nom_du_fichier>")
+		return
+	filename = sys.argv[1]
+	trames = RawData(filename)
+	
+	
+	# trames.printRawData()
+	# print("trame 0")
+	# print(trames.getTrame(0))
+	
+	
+	# enteteEthernet = Ethernet(trames.getTrame(1))
+	# enteteEthernet.printMacSrc()
+	# enteteEthernet.printMacDst()
+	# print(enteteEthernet.type)
+	enteteIP = IP(trames.getTrame(1))
+	# print(enteteIP.fragmentOffset)
+    # print("tset")
+	# print(enteteIP.optionsAndPadding)
+	print(enteteIP.headerLengthHex)
+	enteteTCP = TCP(trames.getTrame(1), enteteIP.headerLengthHex)
+	# enteteTCP.printSrcPort()
+	# enteteTCP.printDstPort()
+	
+	# print(enteteTCP.tcpHeader)
+ 	# print("afh")
+	print(enteteTCP.flagsBin)
+	print(enteteTCP.URG)
+ 
+ 
+
+if __name__=="__main__":
+	main()
