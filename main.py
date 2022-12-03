@@ -38,7 +38,9 @@ def main():
 	#print(enteteTCP.flagsBin)
 	#print(enteteTCP.URG)
 	# print(str_to_bin("f0560f"))
- 
+	s1 = "0b1010001010101001"
+	s2 = "0b1010010101010001"
+	print(binary_sum(s1, s2))
 
 if __name__=="__main__":
 	main()

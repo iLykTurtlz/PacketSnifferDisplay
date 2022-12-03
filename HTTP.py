@@ -5,4 +5,4 @@ class HTTP:
         # string of hex
         self.rawHTTP = trame[sizeTCP + overheadSize:]
         
-        self.rawASCII = 
+        self.rawASCII = 0

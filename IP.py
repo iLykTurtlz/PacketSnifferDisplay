@@ -32,3 +32,5 @@ class IP:
 		#calculate remainder
 		self.optionsAndPadding = datagramme[40:self.headerLengthHex]
 		
+	def check_checksum(self):
+		pass
