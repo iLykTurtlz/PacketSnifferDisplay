@@ -6,9 +6,9 @@ def str_to_hex(s):
 def str_to_int(s):
 	return int(s,16)
 
-# beacuse hex in python is a srting
+# str to bin cause our hex is a string
 def str_to_bin(s):
-    print(s)
+    # print(s)
     
     res = ""
     for i in range (len(s)):

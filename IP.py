@@ -18,15 +18,11 @@ class IP:
 
 
 		flagsAndFragmentOffset = datagramme[12:16]
-		self.flagsBin = bin(str_to_int(datagramme[12]))[2:]
-		self.flagDF = self.flagsBin[0]
-		self.flagMF = self.flagsBin[1]
-
-		#Todo
-		self.fragmentOffset = str_to_hex(flagsAndFragmentOffset) 
-		
-		
-		
+		self.flagsBin = str_to_bin(datagramme[12])
+		self.flagDF = self.flagsBin[1]
+		self.flagMF = self.flagsBin[2]
+		self.fragmentOffset = str_to_bin(flagsAndFragmentOffset)[3:]
+  
 		self.ttl = datagramme[16:18]
 		self.protocol = datagramme[18:20]
 		self.checksum = datagramme[20:24]
