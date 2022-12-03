@@ -22,20 +22,20 @@ def main():
 	# enteteEthernet.printMacSrc()
 	# enteteEthernet.printMacDst()
 	# print(enteteEthernet.type)
-	enteteIP = IP(trames.getTrame(1))
+	#enteteIP = IP(trames.getTrame(1))
 	# print(enteteIP.fragmentOffset)
     # print("tset")
 	# print(enteteIP.optionsAndPadding)
-	print(enteteIP.headerLengthHex)
-	enteteTCP = TCP(trames.getTrame(1), enteteIP.headerLengthHex)
+	#print(enteteIP.headerLengthHex)
+	#enteteTCP = TCP(trames.getTrame(1), enteteIP.headerLengthHex)
 	# enteteTCP.printSrcPort()
 	# enteteTCP.printDstPort()
 	
 	# print(enteteTCP.tcpHeader)
  	# print("afh")
-	print(enteteTCP.flagsBin)
-	print(enteteTCP.URG)
- 
+	#print(enteteTCP.flagsBin)
+	#print(enteteTCP.URG)
+	print(str_to_bin("f0560f"))
  
 
 if __name__=="__main__":
