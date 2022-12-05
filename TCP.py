@@ -20,7 +20,14 @@ class TCP:
         assert(len(reservedAndFlagsBin) == 12)
         self.flagsBin = reservedAndFlagsBin[6:]
         assert(len(flagsBin)==6)
-        self.flags = {'URG':self.flagsBin[0]==1, 'ACK':self.flagsBin[1]==1, 'PSH':self.flagsBin[2]==1, 'RST':self.flagsBin[3]==1, 'SYN':self.flagsBin[4]==1, 'FIN':self.flagsBin[5]==1}
+        self.flags = {
+            'URG':self.flagsBin[0]==1, 
+            'ACK':self.flagsBin[1]==1, 
+            'PSH':self.flagsBin[2]==1, 
+            'RST':self.flagsBin[3]==1, 
+            'SYN':self.flagsBin[4]==1, 
+            'FIN':self.flagsBin[5]==1
+        }
         
         #window
         self.window = self.tcpHeader[28:32]
