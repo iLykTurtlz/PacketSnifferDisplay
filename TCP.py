@@ -48,12 +48,14 @@ class TCP:
         
     def printFlags:
         first=True
-        for k:v in self.flags:
+        for k,v in self.flags.items():
             if v:
                 if first:
                     print(k)
                     first=False
                 else:
                     print(" "+k)
+                    
+
                 
           
