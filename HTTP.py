@@ -15,3 +15,4 @@ class HTTP:
         self.lignesDeLEntete, self.lignesDuCorps = (lignes[:lignes.index("")], lignes[(lignes.index("")+1):])
         
         
+        

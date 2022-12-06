@@ -1,9 +1,11 @@
 import sys
 from Tools import *
-from RawData import RawData
+#from RawData import RawData
+from Traffic import Traffic
 from Ethernet import Ethernet
 from IP import IP
 from TCP import TCP
+from TrafficDisplay import TrafficDisplay
 
 def main():
     # TODO
@@ -11,7 +13,11 @@ def main():
 		print ("usage: python3 discountwireshark.py <nom_du_fichier>")
 		return
 	filename = sys.argv[1]
-	trames = RawData(filename)
+	#trames = RawData(filename)
+	traffic = Traffic(filename)
+	traffic_display = TrafficDisplay(traffic)
+	traffic_display.construct()
+	traffic_display.run()
 	
 	
 	# trames.printRawData()
@@ -25,7 +31,7 @@ def main():
 	# print(enteteEthernet.type)
  
  
-	enteteIP = IP(trames.getTrame(1))
+	#enteteIP = IP(trames.getTrame(1))
 	# print(enteteIP.fragmentOffset)
     # print("tset")
 	# print(enteteIP.optionsAndPadding)
