@@ -1,4 +1,4 @@
-import Trame
+#import Trame
 
 class Ethernet:
 	def __init__(self, trame):

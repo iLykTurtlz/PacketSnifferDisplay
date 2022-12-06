@@ -1,8 +1,8 @@
 import sys
 import Trame
-from tkinter import *
-from tkinter import filedialog
-from tkinter import messagebox
+#from tkinter import *
+#from tkinter import filedialog
+#from tkinter import messagebox
 
 
 class RawData:

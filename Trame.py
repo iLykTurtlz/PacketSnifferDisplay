@@ -2,12 +2,13 @@ from Tools import *
 from Ethernet import Ethernet
 from IP import IP
 from TCP import TCP
-from RawData import RawData
+from HTTP import HTTP
+
 
 """str : rawInput est le flux d'octets d'une seule trame, i.e. un élément d'un tabTrames de la classe RawData.py"""
 
 class Trame:
-	def __init__(self, str : rawInput):
+	def __init__(self, rawInput):
 		self.eth = Ethernet(rawInput)
 		self.ip = IP(rawInput)
 		self.tcp = TCP(rawInput, self.ip.headerLengthHex)
