@@ -14,12 +14,14 @@ class TrafficDisplay:
         self.nbColumns = len(self.ipAddresses)*3 + 2
         
     def construct(self):
-        first = 0
+        first = 1
+        for i in range(1,10):
+            Label(self.window, text="timestamp").grid(row=i, column = 0)
         for addr in self.ipAddresses:
             Label(self.window, text=addr).grid(row=0, column=first, columnspan=2)
-            Separator(self.window, orient=VERTICAL).grid(row=1, rowspan=3, sticky='ns')
+            Separator(self.window, orient=VERTICAL).grid(row=1, column = first, rowspan=9, sticky='ns')
             first += 3
-        
+       
     def run(self):
         mainloop()
         
