@@ -38,16 +38,8 @@ class IP:
         i = 0
         s1 = "0b0000000000000000"
         s2 = ""
-        for letter in self.EntireIPHeader:
-            if i == 7:
-                s2=s2+letter
-                i+=1
-            else:
-                s2=s2+letter
-                i=0
-                s2 = str_to_bin(s2)
-                s1 = binary_sum(s1,("0b"+s2))
-        return s1
+        for i in range(len(self.EntireIPHeader)) :
+            pass
             
                 
     def check_options(self):

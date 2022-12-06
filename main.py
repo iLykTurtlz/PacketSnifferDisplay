@@ -49,7 +49,8 @@ def main():
 	s2 = "0b1010010101010001"
 	s3 = ""
 	print(binary_sum(s1, s2))
-	print(enteteIP.check_checksum())
+	t= traffic.trames[1].ip
+	print(t.check_checksum())
 
 if __name__=="__main__":
 	main()
