@@ -32,6 +32,69 @@ class IP:
 
 		#calculate remainder
         self.optionsAndPadding = datagramme[40:self.headerLengthHex]
-		
+        self.EntireIPHeader = trame[28:self.headerLengthHex]
+  
     def check_checksum(self):
-        pass
+        i = 0
+        s1 = "0b0000000000000000"
+        s2 = ""
+        for letter in self.EntireIPHeader:
+            if i == 7:
+                s2=s2+letter
+                i+=1
+            else:
+                s2=s2+letter
+                i=0
+                s2 = str_to_bin(s2)
+                s1 = binary_sum(s1,("0b"+s2))
+        return s1
+            
+                
+    def check_options(self):
+        if self.optionsAndPadding == "":
+            return []
+        
+        oType = ""
+        oLength = ""
+        oValue = ""
+        
+        for letter in self.optionsAndPadding:
+            oType = oType + letter
+            if(len(oType) == 1):
+                continue
+            
+            oLength = ""
+            oValue = ""
+            
+            
+            
+IPv4options = [("0x00","EOOL", 	"End of Option List"),
+("0x01", 	"NOP", 	"No Operation"),
+("0x02", 	"SEC", 	"Security (defunct)"),
+("0x07", 	"RR", 	"Record Route"),
+("0x0A", 	"ZSU", 	"Experimental Measurement"),
+("0x0B", 	"MTUP", 	"MTU Probe"),
+("0x0C", 	"MTUR", 	"MTU Reply"),
+("0x0F", 	"ENCODE", 	"ENCODE"),
+("0x19", 	"QS", 	"Quick-Start"),
+("0x1E", 	"EXP", 	"RFC3692-style Experiment"),
+("0x44", 	"TS", 	"Time Stamp"),
+("0x52", 	"TR", 	"Traceroute"),
+("0x5E", 	"EXP", 	"RFC3692-style Experiment"),
+("0x82", 	"SEC", 	"Security (RIPSO)"),
+("0x83", 	"LSR", 	"Loose Source Route"),
+("0x85", 	"E-SEC", 	"Extended Security (RIPSO)"),
+("0x86", 	"CIPSO", 	"Commercial IP Security Option"),
+("0x88",	    "SID", 	"Stream ID"),
+("0x89", 	"SSR", 	"Strict Source Route"),
+("0x8E", 	"VISA", 	"Experimental Access Control"),
+("0x90", 	"IMITD", 	"IMI Traffic Descriptor"),
+("0x91", 	"EIP", 	"Extended Internet Protocol"),
+("0x93", 	"ADDEXT", 	"Address Extension"),
+("0x94", 	"RTRALT", 	"Router Alert"),
+("0x95", 	"SDB", 	"Selective Directed Broadcast"),
+("0x97", 	"DPS", 	"Dynamic Packet State"),
+("0x98", 	"UMP", 	"Upstream Multicast Packet"),
+("0x9E", 	"EXP", 	"RFC3692-style Experiment"),
+("0xCD", 	"FINN", 	"Experimental Flow Control"),
+("0xDE", 	"EXP", "RFC3692-style Experiment") ]

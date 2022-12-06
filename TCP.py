@@ -19,7 +19,7 @@ class TCP:
         reservedAndFlagsBin = str_to_bin(self.tcpHeader[25:28]) #corresponds to 12 bits, of which the last 6 are to be kept
         assert(len(reservedAndFlagsBin) == 12)
         self.flagsBin = reservedAndFlagsBin[6:]
-        assert(len(flagsBin)==6)
+        assert(len(self.flagsBin)==6)
         self.flags = {
             'URG':self.flagsBin[0]==1, 
             'ACK':self.flagsBin[1]==1, 
@@ -35,25 +35,15 @@ class TCP:
         self.urgentPointer = self.tcpHeader[36:40]
         
         self.optionsAndPadding = self.tcpHeader[40:self.headerLengthHex]
-       
-        
-        
-        
-        #testing
-        #self.URG = 0
-        
-                
-        # And then affected accordingly
-        # self.URG = self.flagsBin[1]
+
 
     def printSrcPort(self):
-        res = str_to_int(self.srcPort)
         print(f"Port source : {str_to_int(self.srcPort)}")
         
     def printDstPort(self):
         print(f"Port destination : {str_to_int(self.dstPort)}")
         
-    def printFlags:
+    def printFlags(self):
         first=True
         for k,v in self.flags.items():
             if v:

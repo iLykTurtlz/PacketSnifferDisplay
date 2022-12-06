@@ -6,6 +6,7 @@ from IP import IP
 from TCP import TCP
 
 def main():
+    # TODO
 	if sys.argv[1] == 0 :
 		print ("usage: python3 discountwireshark.py <nom_du_fichier>")
 		return
@@ -40,7 +41,9 @@ def main():
 	# print(str_to_bin("f0560f"))
 	s1 = "0b1010001010101001"
 	s2 = "0b1010010101010001"
+	s3 = ""
 	print(binary_sum(s1, s2))
+	print(enteteIP.check_checksum())
 
 if __name__=="__main__":
 	main()

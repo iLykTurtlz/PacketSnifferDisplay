@@ -11,7 +11,7 @@ class HTTP:
         
         self.segment = trame[(sizeTCP+overheadSize):]
         self.segmentDecoded = bytearray.fromhex(self.segment).decode()
-        lignes = self.decoded.split("\r\n")
+        lignes = self.segmentDecoded.split("\r\n")
         self.lignesDeLEntete, self.lignesDuCorps = (lignes[:lignes.index("")], lignes[(lignes.index("")+1):])
         
         

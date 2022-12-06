@@ -1,4 +1,4 @@
-from operator import *
+from operator import __add__ as add
 def str_to_hex(s):
 	res = int(s,16)
 	return hex(res)
