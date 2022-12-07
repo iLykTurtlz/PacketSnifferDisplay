@@ -50,7 +50,10 @@ class TCP:
             self.hasHTTP = False
         except ValueError:
             print(firstLine)
+<<<<<<< Updated upstream
        
+=======
+>>>>>>> Stashed changes
 
 
     def printSrcPort(self):
