@@ -41,12 +41,14 @@ class TCP:
         self.hasPayload = not (totalSizeIP == sizeIP + self.thlHex)
         
         
-        payload = self.tcpHeader[self.headerLengthHex:]
-        # print(payload)
-        payloadASCII = bytearray.fromhex(payload).decode()
-        firstLine = payloadASCII.split("\r\n",1)
-        # print(firstLine[0])
+        
         try:
+            payload = self.tcpHeader[self.headerLengthHex:]
+            #print(payload)
+            payloadASCII = bytearray.fromhex(payload).decode()
+            #print(payloadASCII)
+            firstLine = payloadASCII.split("\r\n",1)
+            #print(firstLine[0])
             self.hasHTTP = self.hasPayload and "HTTP" in firstLine[0]
             # print(self.hasHTTP)
         except UnicodeDecodeError:
@@ -54,6 +56,7 @@ class TCP:
         except ValueError:
             # self.hasHTTP = False
             print(firstLine)
+            
         
         
 

@@ -15,7 +15,7 @@ class HTTP:
         
         
         #TODO
-        self.premiereLigne = 
+        #self.premiereLigne = 
         
         
         

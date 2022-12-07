@@ -17,9 +17,9 @@ def main():
 	traffic = Traffic(filename)
  
  
-	# traffic_display = TrafficDisplay(traffic)
-	# traffic_display.construct()
-	# traffic_display.run()
+	traffic_display = TrafficDisplay(traffic)
+	traffic_display.construct()
+	traffic_display.run()
 	
 	
 	# trames.printRawData()
@@ -51,9 +51,9 @@ def main():
 	# s2 = "0b1010010101010001"
 	# s3 = ""
 	# print(binary_sum(s1, s2))
-	t= traffic.trames[0].http
-	print(t.lignesDeLEntete)
-	print(t.lignesDuCorps)
+	#t= traffic.trames[0].http
+	#print(t.lignesDeLEntete)
+	#print(t.lignesDuCorps)
 	# print(t.urgentPointer)
 	# print(t.optionsAndPadding)
  
