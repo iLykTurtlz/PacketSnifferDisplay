@@ -39,7 +39,17 @@ class TCP:
         # Hacky way to do it!
         self.thlHex = str_to_int(self.thl) *8
         self.hasPayload = not (totalSizeIP == sizeIP + self.thlHex)
-
+        
+        
+        payload = trame[self.headerLengthHex:]
+        firstLine = payload.split("\r\n",1)
+        self.hasHTTP = False
+        try:
+            self.hasHTTP = self.hasPayload and "HTTP" in bytearray.fromhex(firstLine[0]).decode()
+        except ValueError:
+            print(firstLine)
+        except UnicodeDecodeError:
+            self.hasHTTP = False
 
     def printSrcPort(self):
         print(f"Port source : {str_to_int(self.srcPort)}")
