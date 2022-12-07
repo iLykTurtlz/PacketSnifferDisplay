@@ -46,10 +46,11 @@ class TCP:
         self.hasHTTP = False
         try:
             self.hasHTTP = self.hasPayload and "HTTP" in bytearray.fromhex(firstLine[0]).decode()
-        except ValueError:
-            print(firstLine)
         except UnicodeDecodeError:
             self.hasHTTP = False
+        except ValueError:
+            print(firstLine)
+       
 
 
     def printSrcPort(self):
