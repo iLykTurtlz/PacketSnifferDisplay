@@ -15,9 +15,11 @@ def main():
 	filename = sys.argv[1]
 	#trames = RawData(filename)
 	traffic = Traffic(filename)
-	traffic_display = TrafficDisplay(traffic)
-	traffic_display.construct()
-	traffic_display.run()
+ 
+ 
+	# traffic_display = TrafficDisplay(traffic)
+	# traffic_display.construct()
+	# traffic_display.run()
 	
 	
 	# trames.printRawData()
@@ -45,12 +47,13 @@ def main():
 	#print(enteteTCP.flagsBin)
 	#print(enteteTCP.URG)
 	# print(str_to_bin("f0560f"))
-	s1 = "0b1010001010101001"
-	s2 = "0b1010010101010001"
-	s3 = ""
-	print(binary_sum(s1, s2))
+	# s1 = "0b1010001010101001"
+	# s2 = "0b1010010101010001"
+	# s3 = ""
+	# print(binary_sum(s1, s2))
 	t= traffic.trames[1].ip
-	print(t.check_checksum())
+	# print(f"check sum? {t.ValidPacket}")
+	print(t.check_options())
 
 if __name__=="__main__":
 	main()

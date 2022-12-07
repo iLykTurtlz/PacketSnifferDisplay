@@ -1,6 +1,8 @@
+"""
+ORIGINAL PYTHON SCRIPT WRITTEN
+Kept for posterity sake
+"""
 import sys
-
-
 def printRawData(tabTrames):
 	cpt=0
 	for trame in tabTrames :
