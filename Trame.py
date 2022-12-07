@@ -13,6 +13,6 @@ class Trame:
 		self.ip = IP(rawInput)
 		if(self.ip.hasTCP):
 			self.tcp = TCP(rawInput, self.ip.headerLengthHex, self.ip.totalLengthHex)
-			if(self.tcp.hasPayload):
+			if(self.tcp.hasPayload and self.tcp.hasHTTP):
 				self.http = HTTP(rawInput, self.tcp.headerLengthHex, self.tcp.overheadSize)
 
