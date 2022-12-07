@@ -2,7 +2,7 @@
 
 data = "41424320202020204445460d0a444546206465660d0a474849206768690d0a0d0a51525371727320"
 bytes = bytearray.fromhex(data)
-print(bytes)
+print(f"btyes: {bytes}")
 string = bytes.decode()
 print(string)
 

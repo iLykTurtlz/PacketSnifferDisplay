@@ -39,9 +39,12 @@ class IP:
         
         #basically only used for checksum verification purposes
         self.EntireIPHeader = datagramme[:self.headerLengthHex]
+        
         self.ValidPacket = self.check_checksum()
         
         self.hasTCP = str_to_int(self.protocol) == 6
+        
+        self.optionsPresent = self.check_options()
 
     def check_checksum(self):
         """Verifies Checksum
@@ -67,13 +70,32 @@ class IP:
         Returns:
             [Tuple(str,str)]: tab filled with all the options present
         """
-        print(self.optionsAndPadding)
+        # print(f"Options:{self.optionsAndPadding}")
         if self.optionsAndPadding == "":
             return []
-        
-        for letter in self.optionsAndPadding:
-            pass
-        
+        i = 0
+        res = []
+        while (i < len(self.optionsAndPadding)):
+            longeurOption = 2
+            optionType= self.optionsAndPadding[i:i+2]
+            optionType = "0x"+optionType
+            # print (optionType)
+            if(int(optionType, 16 ) ==0):
+                res.append(IPv4options["0x00"])
+                return res
+            
+            if(int(optionType,16) != 1):
+                longeurOption = int(self.optionsAndPadding[i+2:i+4])*2
+                res.append(IPv4options[optionType])
+                # longeurValeur = longeurOption - 4
+                # # print(longeur)
+                # optionsValeur = self.optionsAndPadding[i+4:i+4+longeurValeur]
+                # res.append(f"Valeur de l'option {optionType} : {optionsValeur}")
+            else:
+                res.append(IPv4options["0x01"])
+            
+            i = i + longeurOption
+        return res
             
 # Dictionnary of all IPv4 options     
 IPv4options = {"0x00" : ("EOOL", 	"End of Option List"),
