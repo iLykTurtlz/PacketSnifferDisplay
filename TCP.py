@@ -51,6 +51,7 @@ class TCP:
         except UnicodeDecodeError:
             self.hasHTTP = False
 
+
     def printSrcPort(self):
         print(f"Port source : {str_to_int(self.srcPort)}")
         
