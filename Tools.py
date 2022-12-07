@@ -20,9 +20,12 @@ def str_to_bin(s):
         res = res+tmp
     return res
 
-# solution un peu de travers mais bon
+# binary sucks in python
+"""
 def binary_sum(s1, s2):
-# prends deux mots de 16 bits (0bXXXXXXXX) et les additionne
+'''prends deux mots de 16 bits (0bXXXXXXXX) et les additionne
+pour verfier le checksum
+''' 
     # print(s1)
     # print(s2)
     # print(len(s1))
@@ -43,4 +46,22 @@ def binary_sum(s1, s2):
     else :
         res= res [2:]
     
+    return res
+"""
+
+# meilleure solution
+def hex_sum(h1,h2):
+    """additionne deux hexa et gere les 'overflow' pour
+    verifier le checksum"""
+    # print(h1)
+    # print(h2)
+    
+    max_len = max(len(h1), len(h2))
+    res = hex(int(h1, 16) + int(h2, 16))
+    # print(res)
+    if(max_len < len(res)):
+        # python hex toomfoolery
+        res = res[3:]
+        res = "0x"+res
+        res= hex(int(res, 16) + int("0x01",16))
     return res
