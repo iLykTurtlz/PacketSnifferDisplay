@@ -44,3 +44,10 @@ def binary_sum(s1, s2):
         res= res [2:]
     
     return res
+    
+    
+    
+    
+    
+def convertIPAddress(addressHex):
+        return f"{int(addressHex[0:2],16)}.{int(addressHex[2:4],16)}.{int(addressHex[4:6],16)}.{int(addressHex[6:8],16)}"

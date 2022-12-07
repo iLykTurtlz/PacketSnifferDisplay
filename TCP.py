@@ -35,6 +35,8 @@ class TCP:
         self.urgentPointer = self.tcpHeader[36:40]
         
         self.optionsAndPadding = self.tcpHeader[40:self.headerLengthHex]
+        
+        self.hasHTTP = False
 
 
     def printSrcPort(self):
