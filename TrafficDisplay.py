@@ -30,7 +30,23 @@ class TrafficDisplay:
             Label(self.window, text=addr).grid(row=0, column=first, columnspan=2)
             Separator(self.window, orient=VERTICAL).grid(row=1, column = first, rowspan=9, sticky='ns')
             first += 3
-        """
+        rowIndex=1
+        for frame in self.traffic.trames:
+        	
+        	start = convertIPAddress(frame.ip.srcAddress)
+            finish = convertIPAddress(frame.ip.dstAddress)
+            startIndex = self.ipAddresses.index(start)
+            endIndex = self.ipAddresses.index(finish)
+            if startIndex > endIndex:
+            	canvas = Canvas(window, bg="white")
+                canvas.create_line(ipStart+startIndex*self.columnSize,top+rowIndex*self.rowSize,ipStart+endIndex*self.columnSize,top+rowIndex*self.rowSize, arrow=FIRST) 
+                canvas.grid()
+            else:
+                canvas.create_line(ipStart+startIndex*self.columnSize,top+rowIndex*self.rowSize,ipStart+endIndex*self.columnSize,top+rowIndex*self.rowSize, arrow=LAST)       
+        		canvas.grid()
+        """        	
+        
+        
         self.window.geometry(f"{self.canvasWidth}x{self.canvasHeight}")
         ipStart = 100
         ipIndex=0
@@ -50,9 +66,10 @@ class TrafficDisplay:
             if startIndex > endIndex:
                 self.canvas.create_line(ipStart+startIndex*self.columnSize,top+rowIndex*self.rowSize,ipStart+endIndex*self.columnSize,top+rowIndex*self.rowSize, arrow=FIRST) 
             else:
-                self.canvas.create_line(ipStart+startIndex*self.columnSize,top+rowIndex*self.rowSize,ipStart+endIndex*self.columnSize,top+rowIndex*self.rowSize, arrow=LAST)       
+                self.canvas.create_line(ipStart+startIndex*self.columnSize,top+rowIndex*self.rowSize,ipStart+endIndex*self.columnSize,top+rowIndex*self.rowSize, arrow=LAST)
+                       
         self.canvas.pack()
-                  
+               
        
        
        

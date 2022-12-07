@@ -17,9 +17,9 @@ def main():
 	traffic = Traffic(filename)
  
  
-	# traffic_display = TrafficDisplay(traffic)
-	# traffic_display.construct()
-	# traffic_display.run()
+	traffic_display = TrafficDisplay(traffic)
+	traffic_display.construct()
+	traffic_display.run()
 	
 	
 	# trames.printRawData()
@@ -51,11 +51,11 @@ def main():
 	# s2 = "0b1010010101010001"
 	# s3 = ""
 	# print(binary_sum(s1, s2))
-	t= traffic.trames[1].tcp
- 
+	#t= traffic.trames[1].ip
 	# print(f"check sum? {t.ValidPacket}")
-	
-	print(t.hasPayload)
+	#print(t.check_options())
+
+
 
 if __name__=="__main__":
 	main()
