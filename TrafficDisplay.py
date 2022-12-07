@@ -66,7 +66,7 @@ class TrafficDisplay:
             if startIndex > endIndex:
                 self.canvas.create_line(ipStart+startIndex*self.columnSize,top+rowIndex*self.rowSize,ipStart+endIndex*self.columnSize,top+rowIndex*self.rowSize, arrow=FIRST) 
             else:
-                self.canvas.create_line(ipStart+startIndex*self.columnSize,top+rowIndex*self.rowSize,ipStart+endIndex*self.columnSize,top+rowIndex*self.rowSize, arrow=LAST)
+                self.canvas.create_line(ipStart+endIndex*self.columnSize,top+rowIndex*self.rowSize,ipStart+startIndex*self.columnSize,top+rowIndex*self.rowSize, arrow=LAST)
                        
         self.canvas.pack()
                

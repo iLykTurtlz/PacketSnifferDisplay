@@ -43,14 +43,13 @@ class TCP:
         
         payload = trame[self.headerLengthHex:]
         firstLine = payload.split("\r\n",1)
-        self.hasHTTP = False
         try:
             self.hasHTTP = self.hasPayload and "HTTP" in bytearray.fromhex(firstLine[0]).decode()
         except UnicodeDecodeError:
             self.hasHTTP = False
         except ValueError:
             print(firstLine)
-
+        
 
     def printSrcPort(self):
         print(f"Port source : {str_to_int(self.srcPort)}")
