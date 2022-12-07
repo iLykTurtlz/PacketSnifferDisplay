@@ -40,6 +40,8 @@ class IP:
         #basically only used for checksum verification purposes
         self.EntireIPHeader = datagramme[:self.headerLengthHex]
         self.ValidPacket = self.check_checksum()
+        
+        self.hasTCP = str_to_int(self.protocol) == 6
 
     def check_checksum(self):
         """Verifies Checksum

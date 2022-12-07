@@ -37,8 +37,7 @@ class TCP:
         self.optionsAndPadding = self.tcpHeader[40:self.headerLengthHex]
         
         # Hacky way to do it!
-        self.thlHex = str_to_int(self.thl) *8
-        self.hasPayload = not (totalSizeIP == sizeIP + self.thlHex)
+        self.hasPayload = not (totalSizeIP == sizeIP + self.headerLengthHex)
 
 
     def printSrcPort(self):
