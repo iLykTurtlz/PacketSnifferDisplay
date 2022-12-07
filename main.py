@@ -51,9 +51,11 @@ def main():
 	# s2 = "0b1010010101010001"
 	# s3 = ""
 	# print(binary_sum(s1, s2))
-	t= traffic.trames[1].ip
+	t= traffic.trames[1].tcp
+ 
 	# print(f"check sum? {t.ValidPacket}")
-	print(t.check_options())
+	
+	print(t.hasPayload)
 
 if __name__=="__main__":
 	main()
