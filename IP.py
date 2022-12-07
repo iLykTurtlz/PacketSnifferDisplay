@@ -8,12 +8,15 @@ class IP:
         self.version = datagramme[0:1]
         self.headerLength = datagramme[1:2]
 		
-        # size of IP header in hex characters
+        # size of IP header in number of hex characters
         # a lil bit of movie magic for sure
         self.headerLengthHex = str_to_int(self.headerLength)*8
 		
         self.tos = datagramme[2:4]
+        
+        
         self.totalLength = datagramme[4:8]
+        self.totalLengthHex = str_to_int(self.totalLength)*8
 		
         self.id = datagramme[8:12]
 

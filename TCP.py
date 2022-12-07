@@ -1,7 +1,7 @@
 from IP import IP
 from Tools import *
 class TCP:
-    def __init__(self, trame, sizeIP):
+    def __init__(self, trame, sizeIP, totalSizeIP):
         self.overheadSize = sizeIP + 28 #14 bytes of frame header -> 28 hexadecimal characters
         self.tcpHeader = trame[self.overheadSize:]
         self.srcPort = self.tcpHeader[0:4]
@@ -36,7 +36,9 @@ class TCP:
         
         self.optionsAndPadding = self.tcpHeader[40:self.headerLengthHex]
         
-        self.hasHTTP = False
+        # Hacky way to do it!
+        self.thlHex = str_to_int(self.thl) *8
+        self.hasPayload = not (totalSizeIP == sizeIP + self.thlHex)
 
 
     def printSrcPort(self):

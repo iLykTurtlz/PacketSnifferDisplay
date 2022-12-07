@@ -11,8 +11,9 @@ class Trame:
 	def __init__(self, rawInput):
 		self.eth = Ethernet(rawInput)
 		self.ip = IP(rawInput)
-		self.tcp = TCP(rawInput, self.ip.headerLengthHex)
-		self.http = HTTP(rawInput, self.tcp.headerLengthHex, self.tcp.overheadSize)
+		self.tcp = TCP(rawInput, self.ip.headerLengthHex, self.ip.totalLengthHex)
+		if(self.tcp.hasPayload):
+			self.http = HTTP(rawInput, self.tcp.headerLengthHex, self.tcp.overheadSize)
 	
 	
 		
