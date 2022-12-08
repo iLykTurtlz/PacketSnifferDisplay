@@ -24,4 +24,14 @@ class Trame:
 				return self.tcp
 		return self.ip
 
+	def has(self, protocol):
+		if protocol == "IP":
+			return True
+		elif protocol == "TCP":
+			return self.ip.hasTCP
+		elif self.ip.hasTCP and protocol == "HTTP":
+			return self.tcp.hasHTTP
+		return False
+
+
 
