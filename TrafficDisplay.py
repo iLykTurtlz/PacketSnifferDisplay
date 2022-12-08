@@ -31,6 +31,19 @@ class TrafficDisplay:
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
         self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (notation décimal pointée")
         self.filterEntry = Entry(self.frame, width = 40)
+        self.protocolFilterEntryLabel = Label(self.frame, text="Sélectionnez un protocole")
+        self.options = [
+            "Aucun filtre"
+            "IP",
+            "TCP",
+            "HTTP"
+        ]
+        #self.protocol = StringVar()
+        #self.protocol.set(options[0])
+        #self.dropDown = Combobox(self.frame, value=self.options)
+
+
+
         
     def construct(self):
         self.frame.pack(expand=True, fill=BOTH)
@@ -41,6 +54,9 @@ class TrafficDisplay:
         self.filterEntryLabel.pack(side=TOP, anchor=NW)
         self.filterEntry.pack(side=TOP, anchor=NW)
         self.filterEntry.bind('<Return>', self.applyIPFilter)
+        #self.protocolFilterEntryLabel.pack(side=TOP,anchor=NE)
+        #self.dropDown.pack(side=TOP, anchor = NE)
+        #self.dropDown.bind('<<ComboboxSelected>>', self.applyProtocolFilter)
         self.canvas.config(width=self.canvasWidth,height=self.canvasHeight)
         self.canvas.config(xscrollcommand=self.horizScroll.set, yscrollcommand=self.vertiScroll.set)
         #self.window.geometry(f"{self.canvasWidth}x{self.canvasHeight}")
@@ -107,8 +123,31 @@ class TrafficDisplay:
         os.remove("tmp.ps")
         self.destroy()
     """
+    def applyProtocolFilter(self):
+        protocol = dropDown.get()
+        self.trames=[x for x in self.traffic.trames if x.has(protocol)]
+        ips = set()
+        for frame in self.trames:
+            ips.add(frame.ip.srcAddress)
+            ips.add(frame.ip.dstAddress)
+        self.ipAddresses=[convertIPAddress(a) for a in ips]
+        self.numberOfFrames = len(self.trames)
+        self.numberOfIPAddresses = len(self.ipAddresses)
+        self.frame.destroy()
+        self.nbRows = self.numberOfFrames + 1
+        self.nbColumns = self.numberOfIPAddresses 
+        self.canvasWidth = self.nbColumns*self.columnSize
+        self.canvasHeight = self.nbRows*self.rowSize        
+        self.frame = Frame(self.window, width=self.canvasWidth, height=self.canvasHeight)
+        self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
+        self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
+        self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (notation décimal pointée")
+        self.filterEntry = Entry(self.frame, width = 40)
+        self.construct()
+
+
     def applyIPFilter(self,event):
-        
         ips = self.filterEntry.get()
         #if "&&" not in.... but that doesn't make sense
         ipList = ips.split("||")
