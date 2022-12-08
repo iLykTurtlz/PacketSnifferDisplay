@@ -1,0 +1,4076 @@
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 240.0 bytes
+ID 1796
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [SYN]
+Seq: 3063197879
+Ack: 0
+Win: 5840
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID d206
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,SYN]
+Seq: 610765288
+Ack: 3063197880
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 1797
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063197880
+Ack: 610765289
+Win: 5840
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2148.0 bytes
+ID 1798
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063197880
+Ack: 610765289
+Win: 5840
+GET
+VERSION: HTTP/1.1
+URL: /
+FIELD: GET /
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d207
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610765289
+Ack: 3063198365
+Win: 63755
+HTTP/1.1
+VERSION: OK
+URL: 200
+FIELD: HTTP/1.1 200
+FIELD: Server: Microsoft-IIS/5.0
+FIELD: Content-Location: http://www.xircom.com/home.html
+FIELD: Date: Wed,
+FIELD: Content-Type: text/html
+FIELD: Accept-Ranges: bytes
+FIELD: Last-Modified: Fri,
+FIELD: ETag: "0704113ee2c11:86d"
+FIELD: Content-Length: 12887
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 1799
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198365
+Ack: 610766679
+Win: 8340
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d208
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610766679
+Ack: 3063198365
+Win: 63755
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 179a
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198365
+Ack: 610768069
+Win: 11120
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d20d
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610768069
+Ack: 3063198365
+Win: 63755
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 179b
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198365
+Ack: 610769459
+Win: 13900
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d20e
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610769459
+Ack: 3063198365
+Win: 63755
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 179c
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198365
+Ack: 610770849
+Win: 16680
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d20f
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610770849
+Ack: 3063198365
+Win: 63755
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 179d
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198365
+Ack: 610772239
+Win: 19460
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d210
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610772239
+Ack: 3063198365
+Win: 63755
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 179e
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198365
+Ack: 610773629
+Win: 22240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d211
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610773629
+Ack: 3063198365
+Win: 63755
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 179f
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198365
+Ack: 610775019
+Win: 25020
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d212
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610775019
+Ack: 3063198365
+Win: 63755
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17a0
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198365
+Ack: 610776409
+Win: 27800
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2824.0 bytes
+ID d214
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610777799
+Ack: 3063198365
+Win: 63755
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17a1
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198365
+Ack: 610776409
+Win: 27800
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d213
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610776409
+Ack: 3063198365
+Win: 63755
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17a2
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198365
+Ack: 610778453
+Win: 30580
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2356.0 bytes
+ID 17a3
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063198365
+Ack: 610778453
+Win: 30580
+GET
+VERSION: HTTP/1.1
+URL: /pix/1bluenav0_a.gif
+FIELD: GET /pix/1bluenav0_a.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+FIELD: Referer: http://www.xircom.com/
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d216
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610778453
+Ack: 3063198902
+Win: 63218
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5440.0 bytes
+ID d217
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610779843
+Ack: 3063198902
+Win: 63218
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17a4
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063198902
+Ack: 610781151
+Win: 37530
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2352.0 bytes
+ID 17a5
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063198902
+Ack: 610781151
+Win: 37530
+GET
+VERSION: HTTP/1.1
+URL: /pix/home_right.gif
+FIELD: GET /pix/home_right.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+FIELD: Referer: http://www.xircom.com/
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d21a
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610781151
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d21b
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610782541
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17a6
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610783931
+Win: 43090
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d21c
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610783931
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d21d
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610785321
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17a7
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610786711
+Win: 48650
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d21e
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610786711
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d21f
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610788101
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17a8
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610789491
+Win: 54210
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d220
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610789491
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d221
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610790881
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17a9
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610792271
+Win: 59770
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d222
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610792271
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d223
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610793661
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17aa
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610795051
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d224
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610795051
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d225
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610796441
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17ab
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610797831
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d22a
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610797831
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d22b
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610799221
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17ac
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610800611
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d22c
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610800611
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d22d
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610802001
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17ad
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610803391
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d22e
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610803391
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d22f
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610804781
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17ae
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610806171
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d230
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610806171
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d231
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610807561
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17af
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610808951
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d232
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610808951
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d233
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610810341
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17b0
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610811731
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d234
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610811731
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d235
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610813121
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17b1
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610814511
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d236
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610814511
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d237
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610815901
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17b2
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610817291
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d238
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610817291
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d23c
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610818681
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17b3
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610820071
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d23d
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610820071
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d23e
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610821461
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17b4
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610822851
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d245
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610822851
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d246
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610824241
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17b5
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610825631
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d247
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610825631
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d248
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610827021
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17b6
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610828411
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d249
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610828411
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d24a
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610829801
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17b7
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610831191
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d24b
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610831191
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d24c
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610832581
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17b8
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610833971
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d24d
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610833971
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d24e
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610835361
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17b9
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610836751
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d24f
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610836751
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d250
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610838141
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17ba
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610839531
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d251
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610839531
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d252
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610840921
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17bb
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610842311
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d253
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610842311
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d254
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610843701
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17bc
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610845091
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d255
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610845091
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d256
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610846481
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d25a
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610847871
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17bd
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610849261
+Win: 59770
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d25b
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610849261
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d25c
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610850651
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17be
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610852041
+Win: 62550
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d25d
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610852041
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2916.0 bytes
+ID d25f
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610854821
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17bf
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610853431
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d25e
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610853431
+Ack: 3063199438
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17c0
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199438
+Ack: 610855498
+Win: 62550
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2352.0 bytes
+ID 17c1
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063199438
+Ack: 610855498
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/subhd_shop.gif
+FIELD: GET /pix/subhd_shop.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+FIELD: Referer: http://www.xircom.com/
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 4216.0 bytes
+ID d263
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610855498
+Ack: 3063199974
+Win: 63704
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17c2
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063199974
+Ack: 610856500
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2368.0 bytes
+ID 17c3
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063199974
+Ack: 610856500
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/subhd_products.gif
+FIELD: GET /pix/subhd_products.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+FIELD: Referer: http://www.xircom.com/
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5608.0 bytes
+ID d265
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610856500
+Ack: 3063200514
+Win: 63164
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2372.0 bytes
+ID 17c4
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063200514
+Ack: 610857850
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/subhd_resellers.gif
+FIELD: GET /pix/subhd_resellers.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+FIELD: Referer: http://www.xircom.com/
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5700.0 bytes
+ID d26f
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610857850
+Ack: 3063201055
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2224.0 bytes
+ID 17c5
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063201055
+Ack: 610859223
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/1bluenav2_a.gif
+FIELD: GET /pix/1bluenav2_a.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d274
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610859223
+Ack: 3063201559
+Win: 63736
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 296.0 bytes
+ID d276
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610862003
+Ack: 3063201559
+Win: 63736
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17c6
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063201559
+Ack: 610860613
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d275
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610860613
+Ack: 3063201559
+Win: 63736
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17c7
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063201559
+Ack: 610862025
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2224.0 bytes
+ID 17c8
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063201559
+Ack: 610862025
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/1bluenav4_a.gif
+FIELD: GET /pix/1bluenav4_a.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 336.0 bytes
+ID d27f
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610864805
+Ack: 3063202063
+Win: 63232
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17c9
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063202063
+Ack: 610862025
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d27d
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610862025
+Ack: 3063202063
+Win: 63232
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17ca
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063202063
+Ack: 610863415
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d27e
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610863415
+Ack: 3063202063
+Win: 63232
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17cb
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063202063
+Ack: 610864837
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2248.0 bytes
+ID 17cc
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063202063
+Ack: 610864837
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/subhd_techsupport.gif
+FIELD: GET /pix/subhd_techsupport.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5268.0 bytes
+ID d283
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610864837
+Ack: 3063202573
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2248.0 bytes
+ID 17cd
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063202573
+Ack: 610866102
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/subhd_products_on.gif
+FIELD: GET /pix/subhd_products_on.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 352.0 bytes
+ID d286
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610867492
+Ack: 3063203083
+Win: 63730
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17ce
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063203083
+Ack: 610866102
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d285
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610866102
+Ack: 3063203083
+Win: 63730
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17cf
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063203083
+Ack: 610867528
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2252.0 bytes
+ID 17d0
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063203083
+Ack: 610867528
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/subhd_resellers_on.gif
+FIELD: GET /pix/subhd_resellers_on.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 448.0 bytes
+ID d289
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610868918
+Ack: 3063203594
+Win: 63219
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17d1
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063203594
+Ack: 610867528
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d288
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610867528
+Ack: 3063203594
+Win: 63219
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17d2
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063203594
+Ack: 610868978
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2332.0 bytes
+ID 17d3
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063203594
+Ack: 610868978
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /products.html
+FIELD: GET /products.html
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+FIELD: Referer: http://www.xircom.com/
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3a9
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610868978
+Ack: 3063204125
+Win: 64240
+HTTP/1.1
+VERSION: OK
+URL: 200
+FIELD: HTTP/1.1 200
+FIELD: Server: Microsoft-IIS/5.0
+FIELD: Date: Wed,
+FIELD: Content-Type: text/html
+FIELD: Accept-Ranges: bytes
+FIELD: Last-Modified: Fri,
+FIELD: ETag: "015e3043e2c11:86d"
+FIELD: Content-Length: 8533
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17d4
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063204125
+Ack: 610870368
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3aa
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610870368
+Ack: 3063204125
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17d5
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063204125
+Ack: 610871758
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3ab
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610871758
+Ack: 3063204125
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17d6
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063204125
+Ack: 610873148
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3ac
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610873148
+Ack: 3063204125
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17d7
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063204125
+Ack: 610874538
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3ad
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610874538
+Ack: 3063204125
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17d8
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063204125
+Ack: 610875928
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 1880.0 bytes
+ID d3af
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610877318
+Ack: 3063204125
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17d9
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063204125
+Ack: 610875928
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3ae
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610875928
+Ack: 3063204125
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17da
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063204125
+Ack: 610877736
+Win: 62550
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2420.0 bytes
+ID 17db
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063204125
+Ack: 610877736
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/1allbluenav0_a.gif
+FIELD: GET /pix/1allbluenav0_a.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+FIELD: Referer: http://www.xircom.com/products.html
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3b6
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610877736
+Ack: 3063204678
+Win: 63687
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17dc
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063204678
+Ack: 610879126
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 4912.0 bytes
+ID d3b7
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610879126
+Ack: 3063204678
+Win: 63687
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17dd
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063204678
+Ack: 610880302
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2400.0 bytes
+ID 17de
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063204678
+Ack: 610880302
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/prod_main.jpg
+FIELD: GET /pix/prod_main.jpg
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+FIELD: Referer: http://www.xircom.com/products.html
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3bd
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610880302
+Ack: 3063205226
+Win: 63139
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3be
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610881692
+Ack: 3063205226
+Win: 63139
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17df
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063205226
+Ack: 610883082
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3bf
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610883082
+Ack: 3063205226
+Win: 63139
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3c0
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610884472
+Ack: 3063205226
+Win: 63139
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17e0
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063205226
+Ack: 610885862
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 608.0 bytes
+ID d3c3
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610888642
+Ack: 3063205226
+Win: 63139
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17e1
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063205226
+Ack: 610885862
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3c1
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610885862
+Ack: 3063205226
+Win: 63139
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17e2
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063205226
+Ack: 610887252
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3c2
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610887252
+Ack: 3063205226
+Win: 63139
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17e3
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063205226
+Ack: 610888742
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2408.0 bytes
+ID 17e4
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063205226
+Ack: 610888742
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/left_bottom.gif
+FIELD: GET /pix/left_bottom.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+FIELD: Referer: http://www.xircom.com/products.html
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 1296.0 bytes
+ID d3ca
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610890132
+Ack: 3063205776
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 256.0 bytes
+ID 17e5
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063205776
+Ack: 610888742
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3c9
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610888742
+Ack: 3063205776
+Win: 64240
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17e6
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063205776
+Ack: 610890404
+Win: 62550
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2236.0 bytes
+ID 17e7
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063205776
+Ack: 610890404
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/1allbluenav2_a.gif
+FIELD: GET /pix/1allbluenav2_a.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3ce
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610890404
+Ack: 3063206283
+Win: 63733
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5372.0 bytes
+ID d3cf
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610891794
+Ack: 3063206283
+Win: 63733
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17e8
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063206283
+Ack: 610893085
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 2236.0 bytes
+ID 17e9
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,PSH]
+Seq: 3063206283
+Ack: 610893085
+Win: 63940
+GET
+VERSION: HTTP/1.1
+URL: /pix/1allbluenav4_a.gif
+FIELD: GET /pix/1allbluenav4_a.gif
+FIELD: Host: www.xircom.com
+FIELD: User-Agent: Mozilla/5.0
+FIELD: Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,video/x-mng,image/png,image/jpeg,image/gif;q=0.2,text/css,*/*;q=0.1
+FIELD: Accept-Language: fr-FR,
+FIELD: Accept-Encoding: gzip,
+FIELD: Accept-Charset: ISO-8859-1,
+FIELD: Keep-Alive: 300
+FIELD: Connection: keep-alive
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5768.0 bytes
+ID d3da
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610893085
+Ack: 3063206790
+Win: 63226
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 5384.0 bytes
+ID d3db
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,PSH]
+Seq: 610894475
+Ack: 3063206790
+Win: 63226
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17ea
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063206790
+Ack: 610895769
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 17eb
+Flags {'MF': False, 'DF': False}
+TTL 64
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK,FIN]
+Seq: 3063206790
+Ack: 610895769
+Win: 63940
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID e372
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK]
+Seq: 610895769
+Ack: 3063206791
+Win: 63226
+
+
+Ethernet: 
+Adresse MAC src: (00:50:7f:05:7d:40)
+Adresse MAC dst: (00:10:a4:86:2d:0b)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID e373
+Flags {'MF': False, 'DF': False}
+TTL 112
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 80->33971
+Flags: [ACK,FIN]
+Seq: 610895769
+Ack: 3063206791
+Win: 63226
+
+
+Ethernet: 
+Adresse MAC src: (00:10:a4:86:2d:0b)
+Adresse MAC dst: (00:50:7f:05:7d:40)
+Type 0x0800: IP
+IPv4
+Header Length: 20.0 bytes
+Total Length: 208.0 bytes
+ID 0000
+Flags {'MF': False, 'DF': False}
+TTL 255
+0x06 Is TCP : True
+Valid packet: True (Checksum Verified)
+Options: No options present
+TCP: 33971->80
+Flags: [ACK]
+Seq: 3063206791
+Ack: 610895770
+Win: 63940
+
+
