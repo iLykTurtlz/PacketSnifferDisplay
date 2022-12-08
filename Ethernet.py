@@ -39,7 +39,17 @@ class Ethernet:
 	def printMacDst(self):
 		print(f"Adresse MAC destination = {self.dst}")
 		
-	def printType(self):
+	def strType(self):
 		if self.type == "0800":
-			pass
-	
+			return "IP"
+		if self.type == "0806":
+			return "ARP"
+		return "Unknown"
+
+	def getInfo(self):
+		res = []
+		res.append(f"Ethernet: ")
+		res.append(f"Adresse MAC src: {self.src}")
+		res.append(f"Adresse MAC dst: {self.dst}")
+		res.append(f"Type 0x{self.type}: {self.strType()}")
+		return res

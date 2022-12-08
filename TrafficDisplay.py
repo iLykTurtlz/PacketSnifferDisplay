@@ -124,7 +124,7 @@ class TrafficDisplay:
         self.destroy()
     """
     def applyProtocolFilter(self):
-        protocol = dropDown.get()
+        protocol = self.dropDown.get()
         self.trames=[x for x in self.traffic.trames if x.has(protocol)]
         ips = set()
         for frame in self.trames:

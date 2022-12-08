@@ -33,5 +33,21 @@ class Trame:
 			return self.tcp.hasHTTP
 		return False
 
+	def getInfo(self):
+		"""Returns an array full with all the information of the given packet
+  
+		Type :
+			[str] -> Each case contains a single bit (as in piece) of info
+		"""
+		res = self.eth.getInfo() + self.ip.getInfo()
+		if(self.ip.hasTCP):
+			res = res + self.tcp.getInfo()
+			if(self.tcp.hasPayload and self.tcp.hasHTTP):
+				res = res + self.http.getInfo()
+		res.append("\n")
+		return res
 
 
+
+  
+  
