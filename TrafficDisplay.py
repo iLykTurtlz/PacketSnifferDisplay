@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import filedialog
+from tkinter import messagebox
 from tkinter.ttk import *
 from Tools import *
 from PIL import ImageGrab
@@ -11,22 +12,25 @@ class TrafficDisplay:
 
     def __init__(self, traffic):
         self.traffic=traffic
-        self.numberOfFrames = len(traffic.trames)
         ips = traffic.getDistinctIpAddresses()
         self.ipAddresses = [convertIPAddress(a) for a in ips]
+        self.trames = self.traffic.trames
+        self.numberOfFrames = len(self.trames)
         self.numberOfIPAddresses = len(self.ipAddresses)
         self.window = Tk()
         self.window.title("Trafic réseau")
         self.rowSize = 40
         self.columnSize = 400
         self.nbRows = self.numberOfFrames + 1
-        self.nbColumns = len(self.ipAddresses) + 2
+        self.nbColumns = len(self.ipAddresses) 
         self.canvasWidth = self.nbColumns*self.columnSize
-        self.canvasHeight = self.nbRows*self.rowSize
+        self.canvasHeight = self.nbRows*self.rowSize        
         self.frame = Frame(self.window, width=self.canvasWidth, height=self.canvasHeight)
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
         self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (notation décimal pointée")
+        self.filterEntry = Entry(self.frame, width = 40)
         
     def construct(self):
         self.frame.pack(expand=True, fill=BOTH)
@@ -34,6 +38,9 @@ class TrafficDisplay:
         self.horizScroll.config(command=self.canvas.xview)
         self.vertiScroll.pack(side=RIGHT, fill=Y)
         self.vertiScroll.config(command=self.canvas.yview)
+        self.filterEntryLabel.pack(side=TOP, anchor=NW)
+        self.filterEntry.pack(side=TOP, anchor=NW)
+        self.filterEntry.bind('<Return>', self.applyIPFilter)
         self.canvas.config(width=self.canvasWidth,height=self.canvasHeight)
         self.canvas.config(xscrollcommand=self.horizScroll.set, yscrollcommand=self.vertiScroll.set)
         #self.window.geometry(f"{self.canvasWidth}x{self.canvasHeight}")
@@ -47,7 +54,7 @@ class TrafficDisplay:
             self.canvas.create_line(ipStart+ipIndex*self.columnSize,top,ipStart+ipIndex*self.columnSize,bottom)
             ipIndex += 1
         rowIndex=1
-        for frame in self.traffic.trames:
+        for frame in self.trames:
             #draw arrows from src to dst
             start = convertIPAddress(frame.ip.srcAddress)
             finish = convertIPAddress(frame.ip.dstAddress)
@@ -70,7 +77,7 @@ class TrafficDisplay:
             averageCoord = ((startCoord[0]+endCoord[0])//2,(startCoord[1]+endCoord[1])//2)
             self.canvas.create_text(averageCoord[0],averageCoord[1],text=frame.getHighestLayer().getInfo(),font=('Helvetica 8'),anchor=S)
 
-            rowIndex +=1           
+            rowIndex +=1         
         self.canvas.pack()
        
     def run(self):
@@ -99,8 +106,67 @@ class TrafficDisplay:
         os.remove("tmp.ps")
         self.destroy()
     """
+    def applyIPFilter(self,event):
         
-	
+        ips = self.filterEntry.get()
+        #if "&&" not in.... but that doesn't make sense
+        ipList = ips.split("||")
+        addySet = {x.lstrip().rstrip() for x in ipList if x != ""}
+        if len(addySet) == 0:
+            messagebox.showerror("Erreur","Vous n'avez pas saisi d'adresse IP")
+            return
+        starter_ips = self.traffic.getDistinctIpAddresses()
+        self.ipAddresses = [convertIPAddress(a) for a in starter_ips]
+        for addy in addySet:
+            if addy not in self.ipAddresses:
+                messagebox.showerror("Erreur", "Vous avez saisi une adresse IP non présente dans le flux")
+                self.resetFilters()
+                return
+        self.trames = [x for x in self.traffic.trames if convertIPAddress(x.ip.srcAddress) in addySet or convertIPAddress(x.ip.dstAddress) in addySet]
+        for frame in self.trames:
+            addySet.add(convertIPAddress(frame.ip.srcAddress))
+            addySet.add(convertIPAddress(frame.ip.dstAddress))
+        self.ipAddresses = [x for x in addySet]
+        #elif "&&" in ips and "||" not in ips:    
+        #    ipList = ips.split("&&")
+        #    self.ipAddresses = [x.lstrip().rstrip() for x in ipList if x != ""]
+        #    self.trames = [x for x in self.traffic.trames if convertIPAddress(x.ip.srcAddress) in self.ipAddresses and convertIPAddress(x.ip.dstAddress) in self.ipAddresses]
+        self.numberOfFrames = len(self.trames)
+        self.numberOfIPAddresses = len(self.ipAddresses)
+        self.frame.destroy()
+        self.nbRows = self.numberOfFrames + 1
+        self.nbColumns = self.numberOfIPAddresses 
+        self.canvasWidth = self.nbColumns*self.columnSize
+        self.canvasHeight = self.nbRows*self.rowSize        
+        self.frame = Frame(self.window, width=self.canvasWidth, height=self.canvasHeight)
+        self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
+        self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
+        self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (notation décimal pointée")
+        self.filterEntry = Entry(self.frame, width = 40)
+        self.construct()
+
+    def resetFilters(self):
+        ips = self.traffic.getDistinctIpAddresses()
+        self.ipAddresses = [convertIPAddress(a) for a in ips]
+        self.trames = self.traffic.trames
+        self.numberOfFrames = len(self.trames)
+        self.numberOfIPAddresses = len(self.ipAddresses)
+        self.frame.destroy()
+        self.nbRows = self.numberOfFrames + 1
+        self.nbColumns = self.numberOfIPAddresses 
+        self.canvasWidth = self.nbColumns*self.columnSize
+        self.canvasHeight = self.nbRows*self.rowSize        
+        self.frame = Frame(self.window, width=self.canvasWidth, height=self.canvasHeight)
+        self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
+        self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
+        self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (notation décimal pointée")
+        self.filterEntry = Entry(self.frame, width = 40)
+        self.construct()
+
+
+
 	
 	
 	

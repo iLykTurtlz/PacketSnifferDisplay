@@ -55,7 +55,7 @@ class TCP:
             self.hasHTTP = False
         except ValueError:
             # self.hasHTTP = False
-            print(firstLine)
+            print("ValueError")
             
         
         
