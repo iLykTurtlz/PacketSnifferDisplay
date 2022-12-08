@@ -102,6 +102,17 @@ class TCP:
         res.append(f"Win: {str_to_int(self.window)}")
         return res
 
+    def getShortInfo(self):
+        f = ""
+        for k,v in self.flags.items():
+            if v:
+                if f=="":
+                    f+=k
+                else:
+                    f+=","+k
+        return f"TCP:[{f}]"
+
+
                     
 
                 

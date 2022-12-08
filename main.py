@@ -18,10 +18,10 @@ def main():
 	traffic = Traffic(filename)
  
  
-	# traffic_display = TrafficDisplay(traffic)
-	# traffic_display.construct()
+	traffic_display = TrafficDisplay(traffic)
+	traffic_display.construct()
 	# traffic_display.saveAs()
-	# traffic_display.run()
+	traffic_display.run()
 	
 	
 	

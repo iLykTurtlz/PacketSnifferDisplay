@@ -109,6 +109,10 @@ class IP:
         # res.append(f"{}")
 
         return res
+    
+    def getShortInfo(self):
+        tmp = self.totalLengthHex/2
+        return f"IPv{str_to_int(self.version)}:{tmp} bytes"
 
             
 # Dictionnary of all IPv4 options     

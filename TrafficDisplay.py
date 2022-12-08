@@ -21,9 +21,11 @@ class TrafficDisplay:
         self.window.title("Trafic réseau")
         self.rowSize = 20
         self.columnSize = 100
+        self.commentSize = 500
         self.nbRows = self.numberOfFrames + 1
         self.nbColumns = len(self.ipAddresses) 
-        self.canvasWidth = self.nbColumns*self.columnSize
+        self.commentStart = (self.nbColumns+1)*self.columnSize
+        self.canvasWidth = (self.nbColumns+1)*self.columnSize+self.commentSize
         self.canvasHeight = self.nbRows*self.rowSize        
         self.frame = Frame(self.window, width=self.canvasWidth, height=self.canvasHeight)
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
@@ -66,8 +68,8 @@ class TrafficDisplay:
         bottom = self.canvasHeight
         
         for addr in self.ipAddresses:
-            self.canvas.create_text(ipStart+ipIndex*self.columnSize,10, text=addr, fill="black", font=('Helvetica 7'), justify=CENTER)
-            self.canvas.create_line(ipStart+ipIndex*self.columnSize,top,ipStart+ipIndex*self.columnSize,bottom)
+            self.canvas.create_text(ipStart+ipIndex*self.columnSize,10, text=addr, fill='black', font=('Helvetica 7'), justify=CENTER)
+            self.canvas.create_line(ipStart+ipIndex*self.columnSize,top,ipStart+ipIndex*self.columnSize,bottom, fill="#B5B5B5")
             ipIndex += 1
         rowIndex=1
         for frame in self.trames:
@@ -83,16 +85,18 @@ class TrafficDisplay:
             #add port numbers
             if frame.ip.hasTCP:
                 if startIndex < endIndex:            
-                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 7'),anchor=SE)    
-                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 7'),anchor=SW)
+                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 7'),fill='black',anchor=SE)    
+                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 7'),fill='black',anchor=SW)
                 else:
-                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 7'),anchor=SW)    
-                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 7'),anchor=SE)
+                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 7'),fill='black',anchor=SW)    
+                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 7'),fill='black',anchor=SE)
             
             #add line comments
             averageCoord = ((startCoord[0]+endCoord[0])//2,(startCoord[1]+endCoord[1])//2)
-            self.canvas.create_text(averageCoord[0],averageCoord[1],text=frame.getHighestLayer().getInfo(),font=('Helvetica 7'),anchor=S)
+            self.canvas.create_text(averageCoord[0],averageCoord[1],text=frame.getHighestLayer().getShortInfo(),font=('Helvetica 7'),fill='black',anchor=S)
 
+            #add right-side comments
+            self.canvas.create_text(self.commentStart,startCoord[1],text=frame.getHighestLayer().getInfo(),font=('Helvetica 7'), fill='black',anchor=SW)
             rowIndex +=1         
         self.canvas.pack()
        
@@ -124,7 +128,7 @@ class TrafficDisplay:
         self.destroy()
     """
     def applyProtocolFilter(self):
-        protocol = dropDown.get()
+        protocol = self.dropDown.get()
         self.trames=[x for x in self.traffic.trames if x.has(protocol)]
         ips = set()
         for frame in self.trames:
@@ -136,7 +140,8 @@ class TrafficDisplay:
         self.frame.destroy()
         self.nbRows = self.numberOfFrames + 1
         self.nbColumns = self.numberOfIPAddresses 
-        self.canvasWidth = self.nbColumns*self.columnSize
+        self.commentStart = (self.nbColumns+1)*self.columnSize
+        self.canvasWidth = (self.nbColumns+1)*self.columnSize+self.commentSize
         self.canvasHeight = self.nbRows*self.rowSize        
         self.frame = Frame(self.window, width=self.canvasWidth, height=self.canvasHeight)
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
@@ -176,8 +181,9 @@ class TrafficDisplay:
         self.frame.destroy()
         self.nbRows = self.numberOfFrames + 1
         self.nbColumns = self.numberOfIPAddresses 
-        self.canvasWidth = self.nbColumns*self.columnSize
-        self.canvasHeight = self.nbRows*self.rowSize        
+        self.canvasWidth = (self.nbColumns+1)*self.columnSize+self.commentSize
+        self.canvasHeight = self.nbRows*self.rowSize  
+        self.commentStart = (self.nbColumns+1)*self.columnSize      
         self.frame = Frame(self.window, width=self.canvasWidth, height=self.canvasHeight)
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
         self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
@@ -195,7 +201,8 @@ class TrafficDisplay:
         self.frame.destroy()
         self.nbRows = self.numberOfFrames + 1
         self.nbColumns = self.numberOfIPAddresses 
-        self.canvasWidth = self.nbColumns*self.columnSize
+        self.commentStart = (self.nbColumns+1)*self.columnSize
+        self.canvasWidth = (self.nbColumns+1)*self.columnSize+self.commentSize
         self.canvasHeight = self.nbRows*self.rowSize        
         self.frame = Frame(self.window, width=self.canvasWidth, height=self.canvasHeight)
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))

@@ -70,5 +70,7 @@ class HTTP:
                 res.append(line)
         return res
         
+    def getShortInfo(self):
+        return f"HTTP:{self.version} {self.methode}"
         
         
