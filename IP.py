@@ -98,7 +98,17 @@ class IP:
         return res
     
     def getInfo(self):
-        return f"IPv{str_to_int(self.version)}: ..."
+        res = []
+        res.append(f"IPv{str_to_int(self.version)}")
+        tmp = self.headerLengthHex/2
+        res.append(f"Header Length: {tmp} bytes")
+        tmp = self.totalLengthHex/2
+        res.append(f"Total Length: {tmp} bytes")
+        # res.append(f"{}")
+        # res.append(f"{}")
+        # res.append(f"{}")
+
+        return res
 
             
 # Dictionnary of all IPv4 options     

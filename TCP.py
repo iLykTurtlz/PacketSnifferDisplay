@@ -39,7 +39,7 @@ class TCP:
         # Hacky way to do it!
         self.thlHex = str_to_int(self.thl) *8
         self.hasPayload = not (totalSizeIP == sizeIP + self.thlHex)
-        
+        firstLine = ""
         
         
         try:
@@ -84,8 +84,14 @@ class TCP:
                     f+=k
                 else:
                     f+=","+k
+        res = []
+        res.append(f"TCP: {str_to_int(self.srcPort)}->{str_to_int(self.dstPort)}")
+        res.append(f"Flags: [{f}]")
+        res.append(f"Seq: {str_to_int(self.seqNumber)}")
+        res.append(f"Ack: {str_to_int(self.ackNumber)}")
+        res.append(f"Win: {str_to_int(self.window)}")
+        return res
 
-        return f"TCP: {str_to_int(self.srcPort)}->{str_to_int(self.dstPort)} [{f}] Seq={str_to_int(self.seqNumber)} Ack={str_to_int(self.ackNumber)} Win={str_to_int(self.window)}"
                     
 
                 

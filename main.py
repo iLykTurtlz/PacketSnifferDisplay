@@ -6,6 +6,7 @@ from Ethernet import Ethernet
 from IP import IP
 from TCP import TCP
 from TrafficDisplay import TrafficDisplay
+from writer import writer
 
 def main():
     # TODO
@@ -17,10 +18,10 @@ def main():
 	traffic = Traffic(filename)
  
  
-	traffic_display = TrafficDisplay(traffic)
-	traffic_display.construct()
-	#traffic_display.saveAs()
-	traffic_display.run()
+	# traffic_display = TrafficDisplay(traffic)
+	# traffic_display.construct()
+	# traffic_display.saveAs()
+	# traffic_display.run()
 	
 	
 	
@@ -53,13 +54,13 @@ def main():
 	# s2 = "0b1010010101010001"
 	# s3 = ""
 	# print(binary_sum(s1, s2))
-	#t= traffic.trames[0].http
+	t= traffic.trames[0].tcp
 	#print(t.lignesDeLEntete)
 	#print(t.lignesDuCorps)
 	# print(t.urgentPointer)
 	# print(t.optionsAndPadding)
- 
-	# print(t.lignesDeLEntete[0])
+	w = writer(t.getInfo())
+	
 	#print(t.check_options())
 	# print(f"check sum? {t.ValidPacket}")
 	#print(t.check_options())
