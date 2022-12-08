@@ -54,12 +54,12 @@ def main():
 	# s2 = "0b1010010101010001"
 	# s3 = ""
 	# print(binary_sum(s1, s2))
-	t= traffic.trames[0].tcp
+	###t= traffic.trames[0].tcp
 	#print(t.lignesDeLEntete)
 	#print(t.lignesDuCorps)
 	# print(t.urgentPointer)
 	# print(t.optionsAndPadding)
-	w = writer(t.getInfo())
+	###w = writer(t.getInfo())
 	
 	#print(t.check_options())
 	# print(f"check sum? {t.ValidPacket}")

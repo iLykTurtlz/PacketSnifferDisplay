@@ -19,8 +19,8 @@ class TrafficDisplay:
         self.numberOfIPAddresses = len(self.ipAddresses)
         self.window = Tk()
         self.window.title("Trafic réseau")
-        self.rowSize = 40
-        self.columnSize = 400
+        self.rowSize = 20
+        self.columnSize = 100
         self.nbRows = self.numberOfFrames + 1
         self.nbColumns = len(self.ipAddresses) 
         self.canvasWidth = self.nbColumns*self.columnSize
@@ -66,7 +66,7 @@ class TrafficDisplay:
         bottom = self.canvasHeight
         
         for addr in self.ipAddresses:
-            self.canvas.create_text(ipStart+ipIndex*self.columnSize,10, text=addr, fill="black", font=('Helvetica 8'), justify=CENTER)
+            self.canvas.create_text(ipStart+ipIndex*self.columnSize,10, text=addr, fill="black", font=('Helvetica 7'), justify=CENTER)
             self.canvas.create_line(ipStart+ipIndex*self.columnSize,top,ipStart+ipIndex*self.columnSize,bottom)
             ipIndex += 1
         rowIndex=1
@@ -83,15 +83,15 @@ class TrafficDisplay:
             #add port numbers
             if frame.ip.hasTCP:
                 if startIndex < endIndex:            
-                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 8'),anchor=SE)    
-                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 8'),anchor=SW)
+                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 7'),anchor=SE)    
+                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 7'),anchor=SW)
                 else:
-                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 8'),anchor=SW)    
-                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 8'),anchor=SE)
+                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 7'),anchor=SW)    
+                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 7'),anchor=SE)
             
             #add line comments
             averageCoord = ((startCoord[0]+endCoord[0])//2,(startCoord[1]+endCoord[1])//2)
-            self.canvas.create_text(averageCoord[0],averageCoord[1],text=frame.getHighestLayer().getInfo(),font=('Helvetica 8'),anchor=S)
+            self.canvas.create_text(averageCoord[0],averageCoord[1],text=frame.getHighestLayer().getInfo(),font=('Helvetica 7'),anchor=S)
 
             rowIndex +=1         
         self.canvas.pack()
