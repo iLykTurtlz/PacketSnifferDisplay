@@ -19,7 +19,7 @@ class TrafficDisplay:
         self.numberOfIPAddresses = len(self.ipAddresses)
         self.window = Tk()
         self.window.title("Trafic réseau")
-        self.rowSize = 20
+        self.rowSize = 100
         self.columnSize = 100
         self.commentSize = 500
         self.nbRows = self.numberOfFrames + 1
@@ -45,6 +45,7 @@ class TrafficDisplay:
         #self.dropDown = Combobox(self.frame, value=self.options)
 
 
+        
 
         
     def construct(self):
@@ -61,15 +62,16 @@ class TrafficDisplay:
         #self.dropDown.bind('<<ComboboxSelected>>', self.applyProtocolFilter)
         self.canvas.config(width=self.canvasWidth,height=self.canvasHeight)
         self.canvas.config(xscrollcommand=self.horizScroll.set, yscrollcommand=self.vertiScroll.set)
+        self.canvas.bind("<Button 1>",self.displayInfo)
         #self.window.geometry(f"{self.canvasWidth}x{self.canvasHeight}")
         ipStart = 100
         ipIndex=0
-        top = 15    #hardcoded, should be right beneath the IP addresses
+        self.top = 15    #hardcoded, should be right beneath the IP addresses
         bottom = self.canvasHeight
         
         for addr in self.ipAddresses:
             self.canvas.create_text(ipStart+ipIndex*self.columnSize,10, text=addr, fill='black', font=('Helvetica 7'), justify=CENTER)
-            self.canvas.create_line(ipStart+ipIndex*self.columnSize,top,ipStart+ipIndex*self.columnSize,bottom, fill="#B5B5B5")
+            self.canvas.create_line(ipStart+ipIndex*self.columnSize,self.top,ipStart+ipIndex*self.columnSize,bottom, fill="#B5B5B5")
             ipIndex += 1
         rowIndex=1
         for frame in self.trames:
@@ -78,8 +80,8 @@ class TrafficDisplay:
             finish = convertIPAddress(frame.ip.dstAddress)
             startIndex = self.ipAddresses.index(start)
             endIndex = self.ipAddresses.index(finish)
-            startCoord = (ipStart+startIndex*self.columnSize, top+rowIndex*self.rowSize)
-            endCoord = (ipStart+endIndex*self.columnSize, top+rowIndex*self.rowSize)
+            startCoord = (ipStart+startIndex*self.columnSize, self.top+rowIndex*self.rowSize)
+            endCoord = (ipStart+endIndex*self.columnSize, self.top+rowIndex*self.rowSize)
             self.canvas.create_line(startCoord[0],startCoord[1],endCoord[0],endCoord[1], arrow=LAST) 
             
             #add port numbers
@@ -211,6 +213,26 @@ class TrafficDisplay:
         self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (notation décimal pointée")
         self.filterEntry = Entry(self.frame, width = 40)
         self.construct()
+
+    def displayInfo(self,event):
+        c = event.widget
+        x=c.canvasx(event.x)
+        y=c.canvasy(event.y)
+        clickCoord = (x,y)
+        i=int(  (clickCoord[1]-self.top)/self.rowSize  )
+        infoBrut = self.trames[i].getInfo()
+        info = ""
+        for line in infoBrut:
+            info += line + "\n"
+        self.popup = Toplevel()
+        self.popup.title("Put a title here")
+        self.infoLabel = Label(self.popup, text=info)
+        self.infoLabel.pack()
+        self.closeButton1 = Button(self.popup, text = "Fermer", command=self.popup.destroy)
+        self.closeButton1.pack()
+        self.canvas.bind("<Button 1>",self.displayInfo)
+
+
 
 
 
