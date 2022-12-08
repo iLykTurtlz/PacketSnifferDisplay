@@ -18,6 +18,7 @@ class TrafficDisplay:
         self.numberOfFrames = len(self.trames)
         self.numberOfIPAddresses = len(self.ipAddresses)
         self.window = Tk()
+        self.window.geometry("1000x600")
         self.window.title("Trafic réseau")
         self.rowSize = 100
         self.columnSize = 100
@@ -226,8 +227,17 @@ class TrafficDisplay:
             info += line + "\n"
         self.popup = Toplevel()
         self.popup.title("Put a title here")
-        self.infoLabel = Label(self.popup, text=info)
+        self.infoLabel = Text(self.popup)
+        self.infoLabel.insert(END, info)
+        width = self.infoLabel.winfo_width()
+        height = self.infoLabel.winfo_height()
+        self.popupHScroll = Scrollbar(self.popup, orient=HORIZONTAL)
+        self.popupHScroll.pack(side=BOTTOM, fill=X)
+        self.popupVScroll = Scrollbar(self.popup, orient=VERTICAL)
+        self.popupVScroll.pack(side=RIGHT, fill=Y)
         self.infoLabel.pack()
+        self.popupHScroll.config(command=textbox.xview)
+        self.popupVScroll.config(command=textbox.yview)
         self.closeButton1 = Button(self.popup, text = "Fermer", command=self.popup.destroy)
         self.closeButton1.pack()
         self.canvas.bind("<Button 1>",self.displayInfo)
