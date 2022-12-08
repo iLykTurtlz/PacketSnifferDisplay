@@ -18,10 +18,10 @@ class TrafficDisplay:
         self.numberOfFrames = len(self.trames)
         self.numberOfIPAddresses = len(self.ipAddresses)
         self.window = Tk()
-        self.window.geometry("1000x600")
+        self.window.geometry("1000x700")
         self.window.title("Trafic réseau")
-        self.rowSize = 100
-        self.columnSize = 100
+        self.rowSize = 20
+        self.columnSize = 110
         self.commentSize = 500
         self.nbRows = self.numberOfFrames + 1
         self.nbColumns = len(self.ipAddresses) 
@@ -32,18 +32,18 @@ class TrafficDisplay:
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
         self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
-        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (notation décimal pointée")
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (séparées par des ||)")
         self.filterEntry = Entry(self.frame, width = 40)
-        self.protocolFilterEntryLabel = Label(self.frame, text="Sélectionnez un protocole")
+        #self.protocolFilterEntryLabel = Label(self.frame, text="Sélectionnez un protocole")
         self.options = [
-            "Aucun filtre"
+            "Aucun filtre",
             "IP",
             "TCP",
             "HTTP"
         ]
-        #self.protocol = StringVar()
-        #self.protocol.set(options[0])
-        #self.dropDown = Combobox(self.frame, value=self.options)
+        self.protocol = StringVar()
+        self.protocol.set(self.options[0])
+        self.dropDown = OptionMenu(self.frame, self.protocol, *self.options, command=self.applyProtocolFilter)
 
 
         
@@ -59,7 +59,11 @@ class TrafficDisplay:
         self.filterEntry.pack(side=TOP, anchor=NW)
         self.filterEntry.bind('<Return>', self.applyIPFilter)
         #self.protocolFilterEntryLabel.pack(side=TOP,anchor=NE)
-        #self.dropDown.pack(side=TOP, anchor = NE)
+        self.protocol = StringVar()
+        self.protocol.set(self.options[0])
+        self.dropDown = OptionMenu(self.frame, self.protocol, *self.options, command=self.applyProtocolFilter)
+
+        self.dropDown.pack()
         #self.dropDown.bind('<<ComboboxSelected>>', self.applyProtocolFilter)
         self.canvas.config(width=self.canvasWidth,height=self.canvasHeight)
         self.canvas.config(xscrollcommand=self.horizScroll.set, yscrollcommand=self.vertiScroll.set)
@@ -71,7 +75,7 @@ class TrafficDisplay:
         bottom = self.canvasHeight
         
         for addr in self.ipAddresses:
-            self.canvas.create_text(ipStart+ipIndex*self.columnSize,10, text=addr, fill='black', font=('Helvetica 7'), justify=CENTER)
+            self.canvas.create_text(ipStart+ipIndex*self.columnSize,10, text=addr, fill='black', font=('Helvetica 8'), justify=CENTER)
             self.canvas.create_line(ipStart+ipIndex*self.columnSize,self.top,ipStart+ipIndex*self.columnSize,bottom, fill="#B5B5B5")
             ipIndex += 1
         rowIndex=1
@@ -88,51 +92,28 @@ class TrafficDisplay:
             #add port numbers
             if frame.ip.hasTCP:
                 if startIndex < endIndex:            
-                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 7'),fill='black',anchor=SE)    
-                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 7'),fill='black',anchor=SW)
+                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 8'),fill='black',anchor=SE)    
+                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 8'),fill='black',anchor=SW)
                 else:
-                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 7'),fill='black',anchor=SW)    
-                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 7'),fill='black',anchor=SE)
+                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 8'),fill='black',anchor=SW)    
+                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 8'),fill='black',anchor=SE)
             
             #add line comments
             averageCoord = ((startCoord[0]+endCoord[0])//2,(startCoord[1]+endCoord[1])//2)
-            self.canvas.create_text(averageCoord[0],averageCoord[1],text=frame.getHighestLayer().getShortInfo(),font=('Helvetica 7'),fill='black',anchor=S)
+            self.canvas.create_text(averageCoord[0],averageCoord[1],text=frame.getHighestLayer().getShortInfo(),font=('Helvetica 8'),fill='black',anchor=S)
 
             #add right-side comments
-            self.canvas.create_text(self.commentStart,startCoord[1],text=frame.getHighestLayer().getInfo(),font=('Helvetica 7'), fill='black',anchor=SW)
+            self.canvas.create_text(self.commentStart,startCoord[1],text=frame.getHighestLayer().getInfo(),font=('Helvetica 8'), fill='black',anchor=SW)
             rowIndex +=1         
         self.canvas.pack()
        
     def run(self):
         mainloop()
 
-    """
-    def save_as_png(self):
-        self.file = filedialog.asksaveasfilename(initialdir=".",filetypes=(('PNG File', '.png')))
-        self.file = self.file + ".png"
-        ImageGrab.grab().save(self.file)
-
-    def saveAs(self):
-        #self.file = filedialog.asksaveasfilename(initialdir=".",filetypes(('png','.png')))
-        #self.file = self.file + '.png'
-        x=self.window.winfo_rootx()+self.frame.winfo_x()+self.canvas.winfo_x()
-        y=self.window.winfo_rooty()+self.frame.winfo_y()+self.canvas.winfo_y()
-        x1=x+self.canvas.winfo_width()
-        y1=y+self.canvas.winfo_height()
-        ImageGrab.grab(xdisplay=";0").crop((x,y,x1,y1)).save("example.png")
-    """
-    """
-    #ne marche pas
-    def generate_pdf(self):
-        self.canvas.postscript(file="tmp.ps",colormode='color')
-        process=subprocess.Popen(["ps2pdf","tmp.ps","result.pdf"], shell=True)
-        process.wait()
-        os.remove("tmp.ps")
-        self.destroy()
-    """
-    def applyProtocolFilter(self):
-        protocol = self.dropDown.get()
-        self.trames=[x for x in self.traffic.trames if x.has(protocol)]
+   
+    def applyProtocolFilter(self, event):
+        p = self.protocol.get()
+        self.trames=[x for x in self.traffic.trames if x.has(p)]
         ips = set()
         for frame in self.trames:
             ips.add(frame.ip.srcAddress)
@@ -150,7 +131,7 @@ class TrafficDisplay:
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
         self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
-        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (notation décimal pointée")
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (séparées par des ||)")
         self.filterEntry = Entry(self.frame, width = 40)
         self.construct()
 
@@ -191,7 +172,7 @@ class TrafficDisplay:
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
         self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
-        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (notation décimal pointée")
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (séparées par des ||)")
         self.filterEntry = Entry(self.frame, width = 40)
         self.construct()
 
@@ -211,7 +192,7 @@ class TrafficDisplay:
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
         self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
-        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (notation décimal pointée")
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (séparées par des ||)")
         self.filterEntry = Entry(self.frame, width = 40)
         self.construct()
 
@@ -226,7 +207,7 @@ class TrafficDisplay:
         for line in infoBrut:
             info += line + "\n"
         self.popup = Toplevel()
-        self.popup.title("Put a title here")
+        self.popup.title(self.trames[i].getHighestLayer().getShortInfo())
         self.infoLabel = Text(self.popup)
         self.infoLabel.insert(END, info)
         width = self.infoLabel.winfo_width()
@@ -235,11 +216,10 @@ class TrafficDisplay:
         self.popupHScroll.pack(side=BOTTOM, fill=X)
         self.popupVScroll = Scrollbar(self.popup, orient=VERTICAL)
         self.popupVScroll.pack(side=RIGHT, fill=Y)
+        #self.infoLabel.configure(xscrollcommand=self.popupHScroll.set, yscrollcommand=self.popupVScroll.set)
         self.infoLabel.pack()
-        self.popupHScroll.config(command=textbox.xview)
-        self.popupVScroll.config(command=textbox.yview)
-        self.closeButton1 = Button(self.popup, text = "Fermer", command=self.popup.destroy)
-        self.closeButton1.pack()
+        self.popupHScroll.config(command=self.infoLabel.xview)
+        self.popupVScroll.config(command=self.infoLabel.yview)
         self.canvas.bind("<Button 1>",self.displayInfo)
 
 
