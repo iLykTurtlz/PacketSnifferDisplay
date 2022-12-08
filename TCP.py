@@ -75,7 +75,17 @@ class TCP:
                     first=False
                 else:
                     print(" "+k)
-    
+                    
+    def strInfo(self):
+        f = ""
+        for k,v in self.flags.items():
+            if v:
+                if f=="":
+                    f+=k
+                else:
+                    f+=","+k
+                    
+        return (f"TCP: {str_to_int(self.srcPort)}->{str_to_int(self.dstPort)} [{f}] Seq: {str_to_int(self.seqNumber)} Ack: {str_to_int(self.ackNumber)} Win: {str_to_int(self.window)}")
     def getInfo(self):
         f = ""
         for k,v in self.flags.items():

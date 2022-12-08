@@ -3,7 +3,7 @@ from tkinter import filedialog
 from tkinter import messagebox
 from tkinter.ttk import *
 from Tools import *
-from PIL import ImageGrab
+# from PIL import ImageGrab
 #import subprocess #for the pdf saver that doesn't work
 #import os
 
@@ -83,6 +83,7 @@ class TrafficDisplay:
     def run(self):
         mainloop()
 
+    """
     def save_as_png(self):
         self.file = filedialog.asksaveasfilename(initialdir=".",filetypes=(('PNG File', '.png')))
         self.file = self.file + ".png"
@@ -94,9 +95,9 @@ class TrafficDisplay:
         x=self.window.winfo_rootx()+self.frame.winfo_x()+self.canvas.winfo_x()
         y=self.window.winfo_rooty()+self.frame.winfo_y()+self.canvas.winfo_y()
         x1=x+self.canvas.winfo_width()
-        y2=y+self.canvas.winfo_height()
+        y1=y+self.canvas.winfo_height()
         ImageGrab.grab(xdisplay=";0").crop((x,y,x1,y1)).save("example.png")
-        
+    """
     """
     #ne marche pas
     def generate_pdf(self):
