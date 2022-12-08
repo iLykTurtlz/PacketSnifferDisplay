@@ -99,13 +99,21 @@ class IP:
     
     def getInfo(self):
         res = []
-        res.append(f"IPv{str_to_int(self.version)}")
+        res.append(f"IPv{self.version}")
         tmp = self.headerLengthHex/2
         res.append(f"Header Length: {tmp} bytes")
         tmp = self.totalLengthHex/2
         res.append(f"Total Length: {tmp} bytes")
-        # res.append(f"{}")
-        # res.append(f"{}")
+        res.append(f"ID {self.id}")
+        res.append(f"Flags {self.flags}")
+        tmp = int(("0x"+self.ttl),16)
+        res.append(f"TTL {tmp}")
+        res.append(f"0x{self.protocol} Is TCP : {self.hasTCP}")
+        res.append(f"Valid packet: {self.ValidPacket} (Checksum Verified)")
+        if(self.optionsPresent == []):
+            res.append(f"Options: No options present")
+        else:
+            res.append(f"Options:\n {self.optionsPresent}")
         # res.append(f"{}")
 
         return res

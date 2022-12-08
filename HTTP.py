@@ -23,7 +23,6 @@ class HTTP:
 
             print(trame[(sizeTCP+overheadSize):(sizeTCP+overheadSize+20)])
         
-        #TODO
         try:
             self.premiereLigne = self.lignesDeLEntete[0]
             self.methode = self.premiereLigne.split(" ")[0]
@@ -60,9 +59,9 @@ class HTTP:
             [str] : Each str represents a field of HTML
         """
         res = []
-        res.append("METHOD: "+self.methode)
-        res.append("URL: "+self.URL)
         res.append("VERSION: "+self.version)
+        res.append(" "+self.methode)
+        res.append("URL: "+self.URL)
         # res.append("\n")
         
         if(self.lignesDuCorpsTraduits != []):
