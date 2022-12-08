@@ -59,8 +59,8 @@ class HTTP:
             [str] : Each str represents a field of HTML
         """
         res = []
+        res.append(self.methode)
         res.append("VERSION: "+self.version)
-        res.append(" "+self.methode)
         res.append("URL: "+self.URL)
         # res.append("\n")
         
