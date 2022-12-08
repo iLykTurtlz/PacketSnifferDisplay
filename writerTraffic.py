@@ -1,11 +1,14 @@
 import datetime
 import sys
+from pathlib import Path
 
 class writerTraffic:
     def __init__(self, traffic):
         # traffic is a Trame list
         x=datetime.datetime.now()
+        Path("./PrintedTracesFiles").mkdir(parents=True,exist_ok=True)
         fileOutputName = f'./PrintedTracesFiles/Trace_cree_{x.strftime("%d")}_{x.strftime("%B")}_{x.strftime("%H")}_{x.strftime("%M")}_{x.strftime("%S")}.txt'
+
         original_stdout = sys.stdout # Save a reference to the original standard output
         try:
             print(f"Trying to create a file.. {fileOutputName}")
