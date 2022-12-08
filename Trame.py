@@ -15,4 +15,13 @@ class Trame:
 			self.tcp = TCP(rawInput, self.ip.headerLengthHex, self.ip.totalLengthHex)
 			if(self.tcp.hasPayload and self.tcp.hasHTTP):
 				self.http = HTTP(rawInput, self.tcp.headerLengthHex, self.tcp.overheadSize)
+	
+	def getHighestLayer(self):
+		if self.ip.hasTCP:
+			if self.tcp.hasHTTP:
+				return self.http
+			else:
+				return self.tcp
+		return self.ip
+
 

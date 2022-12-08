@@ -96,6 +96,10 @@ class IP:
             
             i = i + longeurOption
         return res
+    
+    def getInfo(self):
+        return f"IPv{str_to_int(self.version)}: ..."
+
             
 # Dictionnary of all IPv4 options     
 IPv4options = {"0x00" : ("EOOL", 	"End of Option List"),
@@ -128,3 +132,5 @@ IPv4options = {"0x00" : ("EOOL", 	"End of Option List"),
 "0x9E": (	"EXP", 	"RFC3692-style Experiment"),
 "0xCD": (	"FINN", 	"Experimental Flow Control"),
 "0xDE": (	"EXP", "RFC3692-style Experiment")}
+
+    

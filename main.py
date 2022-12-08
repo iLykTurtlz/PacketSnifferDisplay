@@ -19,7 +19,9 @@ def main():
  
 	traffic_display = TrafficDisplay(traffic)
 	traffic_display.construct()
+	#traffic_display.saveAs()
 	traffic_display.run()
+	
 	
 	
 	# trames.printRawData()

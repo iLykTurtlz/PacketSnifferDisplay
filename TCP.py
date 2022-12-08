@@ -21,12 +21,12 @@ class TCP:
         self.flagsBin = reservedAndFlagsBin[6:]
         assert(len(self.flagsBin)==6)
         self.flags = {
-            'URG':self.flagsBin[0]==1, 
-            'ACK':self.flagsBin[1]==1, 
-            'PSH':self.flagsBin[2]==1, 
-            'RST':self.flagsBin[3]==1, 
-            'SYN':self.flagsBin[4]==1, 
-            'FIN':self.flagsBin[5]==1
+            'URG':self.flagsBin[0]=='1', 
+            'ACK':self.flagsBin[1]=='1', 
+            'PSH':self.flagsBin[2]=='1', 
+            'RST':self.flagsBin[3]=='1', 
+            'SYN':self.flagsBin[4]=='1', 
+            'FIN':self.flagsBin[5]=='1'
         }
         
         #window
@@ -75,6 +75,17 @@ class TCP:
                     first=False
                 else:
                     print(" "+k)
+    
+    def getInfo(self):
+        f = ""
+        for k,v in self.flags.items():
+            if v:
+                if f=="":
+                    f+=k
+                else:
+                    f+=","+k
+
+        return f"TCP: {str_to_int(self.srcPort)}->{str_to_int(self.dstPort)} [{f}] Seq={str_to_int(self.seqNumber)} Ack={str_to_int(self.ackNumber)} Win={str_to_int(self.window)}"
                     
 
                 

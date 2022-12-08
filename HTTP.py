@@ -11,11 +11,23 @@ class HTTP:
         self.segment = trame[(sizeTCP+overheadSize):]
         self.segmentDecoded = bytearray.fromhex(self.segment).decode()
         lignes = self.segmentDecoded.split("\r\n")
-        self.lignesDeLEntete, self.lignesDuCorps = (lignes[:lignes.index("")], lignes[(lignes.index("")+1):])
         
+        try:
+            indexOfEmpty = lignes.index("")
+            self.lignesDeLEntete, self.lignesDuCorps = (lignes[:indexOfEmpty], lignes[(indexOfEmpty+1):])
+        except:
+            print("ERROR!!!!")
+            for line in lignes:
+        	    print(line)
+
+            print(trame[(sizeTCP+overheadSize):(sizeTCP+overheadSize+20)])
         
         #TODO
         #self.premiereLigne = 
+
+
+    def getInfo(self):
+        return "Replace this with actual info."
         
         
         

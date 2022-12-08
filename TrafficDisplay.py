@@ -1,6 +1,11 @@
 from tkinter import *
+from tkinter import filedialog
 from tkinter.ttk import *
 from Tools import *
+from PIL import ImageGrab
+#import subprocess #for the pdf saver that doesn't work
+#import os
+
 
 class TrafficDisplay:
 
@@ -13,7 +18,7 @@ class TrafficDisplay:
         self.window = Tk()
         self.window.title("Trafic réseau")
         self.rowSize = 40
-        self.columnSize = 160
+        self.columnSize = 400
         self.nbRows = self.numberOfFrames + 1
         self.nbColumns = len(self.ipAddresses) + 2
         self.canvasWidth = self.nbColumns*self.columnSize
@@ -24,30 +29,6 @@ class TrafficDisplay:
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
         
     def construct(self):
-        """
-        first = 1
-        for i in range(1,10):
-            Label(self.window, text="timestamp").grid(row=i, column = 0)
-        for addr in self.ipAddresses:
-            Label(self.window, text=addr).grid(row=0, column=first, columnspan=2)
-            Separator(self.window, orient=VERTICAL).grid(row=1, column = first, rowspan=9, sticky='ns')
-            first += 3
-        rowIndex=1
-        for frame in self.traffic.trames:
-        	
-        	start = convertIPAddress(frame.ip.srcAddress)
-            finish = convertIPAddress(frame.ip.dstAddress)
-            startIndex = self.ipAddresses.index(start)
-            endIndex = self.ipAddresses.index(finish)
-            if startIndex > endIndex:
-            	canvas = Canvas(window, bg="white")
-                canvas.create_line(ipStart+startIndex*self.columnSize,top+rowIndex*self.rowSize,ipStart+endIndex*self.columnSize,top+rowIndex*self.rowSize, arrow=FIRST) 
-                canvas.grid()
-            else:
-                canvas.create_line(ipStart+startIndex*self.columnSize,top+rowIndex*self.rowSize,ipStart+endIndex*self.columnSize,top+rowIndex*self.rowSize, arrow=LAST)       
-        		canvas.grid()
-        """        	
-        
         self.frame.pack(expand=True, fill=BOTH)
         self.horizScroll.pack(side=BOTTOM, fill=X)
         self.horizScroll.config(command=self.canvas.xview)
@@ -67,6 +48,7 @@ class TrafficDisplay:
             ipIndex += 1
         rowIndex=1
         for frame in self.traffic.trames:
+            #draw arrows from src to dst
             start = convertIPAddress(frame.ip.srcAddress)
             finish = convertIPAddress(frame.ip.dstAddress)
             startIndex = self.ipAddresses.index(start)
@@ -74,23 +56,49 @@ class TrafficDisplay:
             startCoord = (ipStart+startIndex*self.columnSize, top+rowIndex*self.rowSize)
             endCoord = (ipStart+endIndex*self.columnSize, top+rowIndex*self.rowSize)
             self.canvas.create_line(startCoord[0],startCoord[1],endCoord[0],endCoord[1], arrow=LAST) 
+            
+            #add port numbers
             if frame.ip.hasTCP:
                 if startIndex < endIndex:            
-                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),anchor=SE)    
-                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),anchor=SW)
+                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 8'),anchor=SE)    
+                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 8'),anchor=SW)
                 else:
-                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),anchor=SW)    
-                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),anchor=SE)
+                    self.canvas.create_text(startCoord[0],startCoord[1],text=str_to_int(frame.tcp.srcPort),font=('Helvetica 8'),anchor=SW)    
+                    self.canvas.create_text(endCoord[0],endCoord[1],text=str_to_int(frame.tcp.dstPort),font=('Helvetica 8'),anchor=SE)
             
+            #add line comments
+            averageCoord = ((startCoord[0]+endCoord[0])//2,(startCoord[1]+endCoord[1])//2)
+            self.canvas.create_text(averageCoord[0],averageCoord[1],text=frame.getHighestLayer().getInfo(),font=('Helvetica 8'),anchor=S)
+
             rowIndex +=1           
         self.canvas.pack()
-               
-       
-       
        
     def run(self):
         mainloop()
 
+    def save_as_png(self):
+        self.file = filedialog.asksaveasfilename(initialdir=".",filetypes=(('PNG File', '.png')))
+        self.file = self.file + ".png"
+        ImageGrab.grab().save(self.file)
+
+    def saveAs(self):
+        #self.file = filedialog.asksaveasfilename(initialdir=".",filetypes(('png','.png')))
+        #self.file = self.file + '.png'
+        x=self.window.winfo_rootx()+self.frame.winfo_x()+self.canvas.winfo_x()
+        y=self.window.winfo_rooty()+self.frame.winfo_y()+self.canvas.winfo_y()
+        x1=x+self.canvas.winfo_width()
+        y2=y+self.canvas.winfo_height()
+        ImageGrab.grab(xdisplay=";0").crop((x,y,x1,y1)).save("example.png")
+        
+    """
+    #ne marche pas
+    def generate_pdf(self):
+        self.canvas.postscript(file="tmp.ps",colormode='color')
+        process=subprocess.Popen(["ps2pdf","tmp.ps","result.pdf"], shell=True)
+        process.wait()
+        os.remove("tmp.ps")
+        self.destroy()
+    """
         
 	
 	
