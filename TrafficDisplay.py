@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import filedialog
 from tkinter import messagebox
-from tkinter.ttk import *
+from tkinter import ttk
 from Tools import *
 # from PIL import ImageGrab
 #import subprocess #for the pdf saver that doesn't work
@@ -42,7 +42,8 @@ class TrafficDisplay:
             "HTTP"
         ]
         self.protocol = StringVar()
-        self.protocol.set(self.options[0])
+        self.p = self.options[0]
+        self.protocol.set(self.p)
         self.dropDown = OptionMenu(self.frame, self.protocol, *self.options, command=self.applyProtocolFilter)
 
 
@@ -50,6 +51,7 @@ class TrafficDisplay:
 
         
     def construct(self):
+        
         self.frame.pack(expand=True, fill=BOTH)
         self.horizScroll.pack(side=BOTTOM, fill=X)
         self.horizScroll.config(command=self.canvas.xview)
@@ -59,11 +61,7 @@ class TrafficDisplay:
         self.filterEntry.pack(side=TOP, anchor=NW)
         self.filterEntry.bind('<Return>', self.applyIPFilter)
         #self.protocolFilterEntryLabel.pack(side=TOP,anchor=NE)
-        self.protocol = StringVar()
-        self.protocol.set(self.options[0])
-        self.dropDown = OptionMenu(self.frame, self.protocol, *self.options, command=self.applyProtocolFilter)
-
-        self.dropDown.pack()
+        
         #self.dropDown.bind('<<ComboboxSelected>>', self.applyProtocolFilter)
         self.canvas.config(width=self.canvasWidth,height=self.canvasHeight)
         self.canvas.config(xscrollcommand=self.horizScroll.set, yscrollcommand=self.vertiScroll.set)
@@ -73,6 +71,12 @@ class TrafficDisplay:
         ipIndex=0
         self.top = 15    #hardcoded, should be right beneath the IP addresses
         bottom = self.canvasHeight
+        
+        self.protocol = StringVar()
+        self.protocol.set(self.p)
+        self.dropDown = OptionMenu(self.frame, self.protocol, *self.options, command=self.applyProtocolFilter)
+
+        self.dropDown.pack()
         
         for addr in self.ipAddresses:
             self.canvas.create_text(ipStart+ipIndex*self.columnSize,10, text=addr, fill='black', font=('Helvetica 8'), justify=CENTER)
@@ -106,14 +110,16 @@ class TrafficDisplay:
             self.canvas.create_text(self.commentStart,startCoord[1],text=frame.getHighestLayer().getInfo(),font=('Helvetica 8'), fill='black',anchor=SW)
             rowIndex +=1         
         self.canvas.pack()
+        
        
     def run(self):
         mainloop()
 
    
     def applyProtocolFilter(self, event):
-        p = self.protocol.get()
-        self.trames=[x for x in self.traffic.trames if x.has(p)]
+        self.p = self.protocol.get()
+        
+        self.trames=[x for x in self.traffic.trames if x.has(self.p)]
         ips = set()
         for frame in self.trames:
             ips.add(frame.ip.srcAddress)
@@ -163,6 +169,7 @@ class TrafficDisplay:
         self.numberOfFrames = len(self.trames)
         self.numberOfIPAddresses = len(self.ipAddresses)
         self.frame.destroy()
+        self.p="Aucun filtre"
         self.nbRows = self.numberOfFrames + 1
         self.nbColumns = self.numberOfIPAddresses 
         self.canvasWidth = (self.nbColumns+1)*self.columnSize+self.commentSize
