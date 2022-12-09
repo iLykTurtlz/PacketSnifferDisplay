@@ -12,6 +12,7 @@ from Trame import Trame
 
 class Traffic:
     def __init__(self, filename):
+    #def __init__(self):            #la version sans arguments fait crasher les Macbook :/
         self.raw = RawData(filename)
         self.trames = []
         for frameBytes in self.raw.tabTrames:

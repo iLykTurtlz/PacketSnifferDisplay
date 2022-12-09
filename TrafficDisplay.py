@@ -32,7 +32,7 @@ class TrafficDisplay:
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
         self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
-        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (séparées par des ||)")
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP séparées par ||")
         self.filterEntry = Entry(self.frame, width = 40)
         #self.protocolFilterEntryLabel = Label(self.frame, text="Sélectionnez un protocole")
         self.options = [
@@ -51,7 +51,6 @@ class TrafficDisplay:
 
         
     def construct(self):
-        
         self.frame.pack(expand=True, fill=BOTH)
         self.horizScroll.pack(side=BOTTOM, fill=X)
         self.horizScroll.config(command=self.canvas.xview)
@@ -64,7 +63,8 @@ class TrafficDisplay:
         
         #self.dropDown.bind('<<ComboboxSelected>>', self.applyProtocolFilter)
         self.canvas.config(width=self.canvasWidth,height=self.canvasHeight)
-        self.canvas.config(xscrollcommand=self.horizScroll.set, yscrollcommand=self.vertiScroll.set)
+        self.canvas.config(xscrollcommand=self.horizScroll.set)
+        self.canvas.config(yscrollcommand=self.vertiScroll.set)
         self.canvas.bind("<Button 1>",self.displayInfo)
         #self.window.geometry(f"{self.canvasWidth}x{self.canvasHeight}")
         ipStart = 100
@@ -77,11 +77,12 @@ class TrafficDisplay:
         self.dropDown = OptionMenu(self.frame, self.protocol, *self.options, command=self.applyProtocolFilter)
 
         self.dropDown.pack()
-        
+        #ip addresses on top, with gray lines coming down from them
         for addr in self.ipAddresses:
             self.canvas.create_text(ipStart+ipIndex*self.columnSize,10, text=addr, fill='black', font=('Helvetica 8'), justify=CENTER)
             self.canvas.create_line(ipStart+ipIndex*self.columnSize,self.top,ipStart+ipIndex*self.columnSize,bottom, fill="#B5B5B5")
             ipIndex += 1
+        self.canvas.create_text(self.commentStart,10,text="Commentaires", fill='black',font=('Helvetica 8'), anchor=W)
         rowIndex=1
         for frame in self.trames:
             #draw arrows from src to dst
@@ -137,7 +138,7 @@ class TrafficDisplay:
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
         self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
-        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (séparées par des ||)")
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP séparées par ||")
         self.filterEntry = Entry(self.frame, width = 40)
         self.construct()
 
@@ -179,7 +180,7 @@ class TrafficDisplay:
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
         self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
-        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (séparées par des ||)")
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP séparées par ||")
         self.filterEntry = Entry(self.frame, width = 40)
         self.construct()
 
@@ -199,7 +200,7 @@ class TrafficDisplay:
         self.canvas = Canvas(self.frame, width=self.canvasWidth, height=self.canvasHeight, bg="white", scrollregion=(0,0,self.canvasWidth,self.canvasHeight))
         self.horizScroll = Scrollbar(self.frame, orient=HORIZONTAL)
         self.vertiScroll = Scrollbar(self.frame, orient=VERTICAL)
-        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP (séparées par des ||)")
+        self.filterEntryLabel = Label(self.frame, text="Saississez des adresses IP séparées par ||")
         self.filterEntry = Entry(self.frame, width = 40)
         self.construct()
 
@@ -224,6 +225,8 @@ class TrafficDisplay:
         self.popupVScroll = Scrollbar(self.popup, orient=VERTICAL)
         self.popupVScroll.pack(side=RIGHT, fill=Y)
         #self.infoLabel.configure(xscrollcommand=self.popupHScroll.set, yscrollcommand=self.popupVScroll.set)
+        self.infoLabel.config(xscrollcommand=self.popupHScroll.set)
+        self.infoLabel.config(yscrollcommand=self.popupVScroll.set)
         self.infoLabel.pack()
         self.popupHScroll.config(command=self.infoLabel.xview)
         self.popupVScroll.config(command=self.infoLabel.yview)

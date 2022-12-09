@@ -1,4 +1,5 @@
 import sys
+import traceback
 from Tools import *
 #from RawData import RawData
 from Traffic import Traffic
@@ -12,17 +13,30 @@ from writerTraffic import writerTraffic
 
 def main():
     # TODO
+	
 	if sys.argv[1] == 0 :
 		print ("usage: python3 discountwireshark.py <nom_du_fichier>")
 		return
 	filename = sys.argv[1]
+	
 	#trames = RawData(filename)
+	"""
+	try:									#malheureusement la version sans arguments sur la ligne de commmande ne fonctionne pas sur les macbook
+		traffic = Traffic()					#création des objets
+	except UnicodeDecodeError:
+		print("Erreur de lecture du fichier")
+		return
+	except TypeError:
+		print("Exécution annulée")
+		return
+	except:
+		print("Erreur inconnue :")
+		traceback.print_exc()
+		return
+	"""
 	traffic = Traffic(filename)
- 
- 
-	traffic_display = TrafficDisplay(traffic)
+	traffic_display = TrafficDisplay(traffic)	#GUI
 	traffic_display.construct()
-	# traffic_display.saveAs()
 	traffic_display.run()
 	
 	
@@ -61,7 +75,7 @@ def main():
 	# print(t.urgentPointer)
 	# print(t.optionsAndPadding)
 	# print(t.getInfo())
-	w = writerTraffic(traffic)
+	w = writerTraffic(traffic)	#enregistrement
 	
 	#print(t.check_options())
 	# print(f"check sum? {t.ValidPacket}")
